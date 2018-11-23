@@ -1,0 +1,75 @@
+{
+	"gulp":
+	{
+	"languages": [
+            "Languages/*.js"
+        ],
+		"javascript": [
+			"JavaScript/*"
+		],
+		"templates": [
+			"Templates/*"
+		],
+		"sass": [
+			"Sass/*.scss"
+		],
+    "ssp-files": {
+            "SuiteScript/shopping.ssp": "shopping.ssp",
+            "Internals/index-local.ssp": "shopping-local.ssp"
+        },
+		"configuration": [
+			"Configuration/*.json"
+		]
+	},"overrides":
+  {"suitecommerce/ShoppingApplication@4.1.0/SuiteScript/shopping.ssp": "SuiteScript/shopping.ssp",
+    "suitecommerce/ShoppingApplication@4.1.0/SuiteScript/logOut.ssp": "SuiteScript/logOut.ssp",
+  "suitecommerce/ShoppingApplication@4.1.0/Internals/index-local.ssp": "Internals/index-local.ssp",
+  "suitecommerce/ShoppingApplication@4.1.0/Sass/_shopping-layout.scss": "Sass/_shopping-layout.scss",
+  "suitecommerce/ShoppingApplication@4.1.0/Templates/shopping_layout.tpl": "Templates/shopping_layout.tpl",
+  "suitecommerce/ShoppingApplication@4.1.0/Languages/en_US.js": "Languages/en_US.js",
+  "suitecommerce/Facets@3.2.0/JavaScript/Facets.Translator.js": "JavaScript/Facets.Translator.js",
+  "suitecommerce/Facets@3.2.0/JavaScript/Facets.Browse.View.js": "JavaScript/Facets.Browse.View.js",
+  "suitecommerce/Facets@3.2.0/JavaScript/Facets.ItemCell.View.js": "JavaScript/Facets.ItemCell.View.js",
+  "suitecommerce/Facets@3.2.0/JavaScript/Facets.FacetedNavigationItem.View.js": "JavaScript/Facets.FacetedNavigationItem.View.js",
+  "suitecommerce/Facets@3.2.0/JavaScript/Facets.FacetedNavigationItemCategory.View.js": "JavaScript/Facets.FacetedNavigationItemCategory.View.js",
+  "suitecommerce/Facets@3.2.0/Sass/_facets-facet-browse.scss": "Sass/_facets-facet-browse.scss",
+  "suitecommerce/Facets@3.2.0/Sass/_facets-faceted-navigation-item-color.scss": "Sass/_facets-faceted-navigation-item-color.scss",
+  "suitecommerce/Facets@3.2.0/Sass/_facets-faceted-navigation-item-range.scss": "Sass/_facets-faceted-navigation-item-range.scss",
+  "suitecommerce/Facets@3.2.0/Sass/_facets-faceted-navigation-item-category.scss": "Sass/_facets-faceted-navigation-item-category.scss",
+  "suitecommerce/Facets@3.2.0/Sass/_facets-faceted-navigation.scss": "Sass/_facets-faceted-navigation.scss",
+  "suitecommerce/Facets@3.2.0/Sass/_facets-item-cell-grid.scss": "Sass/_facets-item-cell-grid.scss",
+  "suitecommerce/Facets@3.2.0/Templates/facets_facet_browse.tpl": "Templates/facets_facet_browse.tpl",
+  "suitecommerce/Facets@3.2.0/Templates/facets_item_cell_grid.tpl": "Templates/facets_item_cell_grid.tpl",
+  "suitecommerce/Facets@3.2.0/Templates/facets_faceted_navigation_item_color.tpl": "Templates/facets_faceted_navigation_item_color.tpl",
+  "suitecommerce/Facets@3.2.0/Templates/facets_faceted_navigation_item_category.tpl": "Templates/facets_faceted_navigation_item_category.tpl",
+  "suitecommerce/Facets@3.2.0/Templates/facets_faceted_navigation_item.tpl": "Templates/facets_faceted_navigation_item.tpl",
+  "suitecommerce/Facets@3.2.0/Templates/facets_faceted_navigation.tpl": "Templates/facets_faceted_navigation.tpl",
+  "suitecommerce/Categories@3.0.4/SuiteScript/Categories.Model.js": "SuiteScript/Categories.Model.js",
+  "suitecommerce/ProductDetails@1.0.3/JavaScript/ProductDetails.Full.View.js": "JavaScript/ProductDetails.Full.View.js",
+  "suitecommerce/ProductDetails@1.0.3/JavaScript/ProductDetails.Base.View.js": "JavaScript/ProductDetails.Base.View.js",
+  "suitecommerce/ProductDetails@1.0.3/JavaScript/ProductDetails.QuickView.View.js": "JavaScript/ProductDetails.QuickView.View.js",
+  "suitecommerce/ProductDetails@1.0.3/JavaScript/ProductDetails.Options.Selector.View.js": "JavaScript/ProductDetails.Options.Selector.View.js",
+  "suitecommerce/ProductDetails@1.0.3/Templates/product_details_full.tpl": "Templates/product_details_full.tpl",
+  "suitecommerce/ProductDetails@1.0.3/Templates/product_details_quickview.tpl": "Templates/product_details_quickview.tpl",
+  "suitecommerce/ProductDetails@1.0.3/Sass/_product-details-full.scss": "Sass/_product-details-full.scss",
+  "suitecommerce/ProductDetails@1.0.3/Sass/_product-details-options-selector.scss": "Sass/_product-details-options-selector.scss",
+  "suitecommerce/ProductDetails@1.0.3/Sass/_product-details-quantity.scss": "Sass/_product-details-quantity.scss",
+  "suitecommerce/ProductDetails@1.0.3/Templates/product_details_options_selector.tpl": "Templates/product_details_options_selector.tpl",
+  "suitecommerce/ProductViews@1.0.2/Sass/_product-views-option-dropdown.scss": "Sass/_product-views-option-dropdown.scss",
+  "suitecommerce/ProductViews@1.0.2/Sass/_product-views-option-color.scss": "Sass/_product-views-option-color.scss",
+  "suitecommerce/ProductViews@1.0.2/Sass/_product-views-price.scss": "Sass/_product-views-price.scss",
+  "suitecommerce/ProductViews@1.0.2/Templates/product_views_option_dropdown.tpl": "Templates/product_views_option_dropdown.tpl",
+  "suitecommerce/ProductViews@1.0.2/Templates/product_views_option_color.tpl": "Templates/product_views_option_color.tpl",
+  "suitecommerce/ProductViews@1.0.2/Templates/product_views_price.tpl": "Templates/product_views_price.tpl",
+  "suitecommerce/ProductViews@1.0.2/JavaScript/ProductViews.Option.View.js": "JavaScript/ProductViews.Option.View.js",
+  "suitecommerce/ProductViews@1.0.2/JavaScript/ProductViews.Price.View.js": "JavaScript/ProductViews.Price.View.js",
+  "suitecommerce/Product@1.0.2/JavaScript/Product.Model.js": "JavaScript/Product.Model.js",
+  "suitecommerce/ProductList@3.0.3/Sass/_product-list-control.scss": "Sass/_product-list-control.scss",
+  "suitecommerce/ProductList@3.0.3/Templates/product_list_control.tpl": "Templates/product_list_control.tpl",
+  "suitecommerce/CMSadapter@4.0.0/Templates/cms_landing_page.tpl": "Templates/cms_landing_page.tpl",
+  "suitecommerce/CMSadapter@4.0.0/JavaScript/CMSadapter.Landing.View.js": "JavaScript/CMSadapter.Landing.View.js",
+  "suitecommerce/CMSadapter@4.0.0/Sass/_cms-landing-page.scss": "Sass/_cms-landing-page.scss",
+  "suitecommerce/SocialSharing@2.0.4/Sass/_social-sharing-flyout.scss": "Sass/_social-sharing-flyout.scss",
+  "suitecommerce/CMSadapter@4.0.0/JavaScript/CMSadapter.Component.js": "JavaScript/CMSadapter.Component.js"}
+  
+}

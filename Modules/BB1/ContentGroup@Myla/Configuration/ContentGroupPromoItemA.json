@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "subtab":
+  {
+    "id": "contentGroupsPromoItemA",
+    "title": "Promo Item A",
+    "group": "contentGroupsTab"
+  },
+  "properties":
+  {
+    "contentGroups.promoitema":
+    {
+      "group": "contentGroupsTab",
+      "subtab": "contentGroupsPromoItemA",
+      "type": "array",
+      "title": "Promo Item A",
+      "description": "A list of all the groups used in a promo item.",
+      "items":
+      {
+        "type": "object",
+        "properties":
+        {
+
+          "groupTemplate":
+          {
+            "type": "string",
+            "title": "Group",
+            "source": "$resource.fields.groupTemplates"
+          }
+
+        }
+        },
+        "default": [
+        {"groupTemplate":"COLLECTION CELL GROUP x3 LEFT"}
+        ]
+      }
+    }
+  }

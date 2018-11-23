@@ -1,0 +1,34 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.itemssearcher-input {
+    @extend .input-large;
+    font-size: $sc-font-size-xl!important;
+    color: $myla-color-black!important;
+    font-family: $Domaine-font;
+
+
+    @media (max-width: $screen-xs-max) {
+        width:90%!important;
+        min-width: 0!important;
+    }
+}
+
+input[type="search"]{ 
+@media (max-width: $screen-xs-max) {
+        font-size: $sc-font-size-m;
+        margin-bottom: 0px!important;
+    }}
+
+.typeahead-image {
+    width: 32px;
+}
+
+.itemssearcher-item-results-image {
+    width: 40px;
+    padding: 0;
+}

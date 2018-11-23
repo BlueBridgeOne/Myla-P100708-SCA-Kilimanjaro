@@ -1,0 +1,125 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.categories-menu {
+    @media (min-width: $screen-sm-min) {
+        margin-top:3%;
+        margin-bottom: 8%;
+    }
+    @media (max-width: $screen-xs-max) {
+        border-top: 1px solid $myla-color-verylightgrey;
+        display: block;
+    }
+}
+
+.categories-menu-account{
+display:none;
+    @media (max-width: $screen-xs-max) {
+        border-top: 1px solid $myla-color-verylightgrey;
+        display: block;
+    }
+}
+
+.categories-menu-anchor {
+    display: block;
+    curstor:default;
+    @media (max-width: $screen-xs-max) {
+        cursor:pointer;
+    }
+}
+
+.categories-menu-icon {
+    @extend .icon-chevron-down;
+    float: right;
+    display: none;
+    color: $myla-color-verylightgrey;
+    transition: 0.3s linear all;
+    @media (max-width: $screen-xs-max) {
+        display:inline-block;
+    }
+}
+
+.header-menu-level2-wrapper {
+    width: 100%;
+    @media (max-width: $screen-xs-max) {
+    background-color:#FAFAFA;
+        overflow-x:auto;
+        border-top: 1px solid $myla-color-verylightgrey;
+        display: none;
+    }
+}
+
+.categories-menu-icon.open{
+-webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
+
+.header-menu-level1>li {
+
+    @media (min-width: $screen-sm-min) {
+        float: left;
+        min-width: 18%;
+    }
+}
+
+.header-menu-level1-anchor {
+    display: block;
+    position: relative;
+    padding: 0 $sc-padding-lv2;
+    margin-right: $sc-margin-lv1;
+    color: $myla-color-darkgrey;
+    text-transform: uppercase;
+
+    @media (max-width: $screen-xs-max) {
+        font-family:$Proxima-font;
+        font-size: $sc-font-size-s;
+        font-weight: normal;
+        padding: 14px $sc-padding-lv3 11px $sc-padding-lv3;
+        margin: 0;
+    }
+}
+
+.header-menu-level2-anchor {
+    text-transform: uppercase;
+    color: $sc-color-copy;
+    padding: $sc-padding-lv1 $sc-padding-lv2;
+    margin-right: $sc-margin-lv1;
+    display: block;
+    font-size: $sc-font-size-xs;
+    font-weight: normal;
+    @media (max-width: $screen-xs-max) {
+        display:inline-block;
+    }
+}
+
+.header-menu-level2>li {
+
+    @media (max-width: $screen-xs-max) {
+        Afloat: left;
+        display: inline-block;
+    }
+}
+
+.header-menu-level2 {
+    @media (max-width: $screen-xs-max) {
+        white-space: nowrap;
+        padding: 10px $sc-padding-lv1 7px $sc-padding-lv1;
+    }
+}
+
+.header-menu-level3-anchor {
+    text-transform: uppercase;
+}
+
+.header-menu-level-container {
+    width: auto;
+}

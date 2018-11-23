@@ -1,0 +1,19 @@
+{
+	"gulp":
+	{
+		"javascript": [
+			"JavaScript/*"
+		],
+		"templates": [
+			"Templates/*"
+		],
+		"sass": [
+			"Sass/**/*.scss"
+		],
+		"configuration": [
+			"Configuration/*.json"
+		]
+	},
+	"overrides":
+  {"suitecommerce/Backbone.CompositeView@2.0.2/JavaScript/Backbone.CompositeView.js": "JavaScript/Backbone.CompositeView.js"}
+}

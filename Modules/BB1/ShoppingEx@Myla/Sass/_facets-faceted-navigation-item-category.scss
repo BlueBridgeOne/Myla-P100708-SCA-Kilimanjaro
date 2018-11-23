@@ -1,0 +1,89 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.facets-faceted-navigation-item-category{position:relative;}
+.facets-faceted-navigation-item-category-icon-ok {
+	
+}
+
+.facets-faceted-navigation-item-category-icon-plus {
+	
+}
+
+.facets-faceted-navigation-item-category-optionlist-extra-button {
+	
+}
+
+.facets-faceted-navigation-item-category-facet-group {
+}
+
+.facets-faceted-navigation-item-category-facet-group-expander {
+	padding-left: $sc-padding-lv3;
+    padding-right:$sc-padding-lv3;
+    text-transform: uppercase;
+    position:absolute;
+    height:$sc-subcat-height;
+	line-height:$sc-subcat-height;
+	margin-top: -$sc-subcat-height;
+	@media (max-width: $screen-xs-max) {
+     		display:none;
+     	}
+}
+
+.facets-faceted-navigation-item-category-facet-group-expander-icon {
+	
+}
+
+
+.facets-faceted-navigation-item-category-facet-group-title {
+	
+}
+
+.facets-faceted-navigation-item-category-facet-option {
+	font-size:$sc-font-size-m;
+padding-left:$sc-margin-lv2;
+padding-right:$sc-margin-lv2;
+height:$sc-subcat-height;line-height:$sc-subcat-height;
+}
+
+.facets-faceted-navigation-item-category-facet-option.option-active{
+color:black;
+font-weight:bold;
+background-color:#EEE;
+display:inline-block;
+}
+
+.facets-faceted-navigation-item-category-facet-option-circle {
+	
+}
+.facets-faceted-navigation-item-category-alt-caption {
+	display:none;
+}
+
+.facets-faceted-navigation-item-category-facet-multi {}
+
+.facets-faceted-navigation-item-category-optionlist-extra-wrapper {}
+
+.facets-faceted-navigation-item-category-facet-optionlist-extra {}
+
+.facets-faceted-navigation-item-category-facet-optionlist {display:block;margin-left:auto;margin-right:auto;
+white-space:nowrap;width:auto;max-width:none;
+}
+
+.facets-faceted-navigation-item-category-facet-optionlist>li {
+        display: inline-block;
+}
+
+
+.facets-faceted-navigation-item-category-facet-group-content {}
+
+.facets-faceted-navigation-item-category-facet-group-wrapper {width:100%;background-color:#FAFAFA;text-align:center;height:$sc-subcat-height;line-height:$sc-subcat-height;overflow-x:auto;overflow-y:none;}
+
+.facets-faceted-navigation-item-category-title
+{
+	
+}

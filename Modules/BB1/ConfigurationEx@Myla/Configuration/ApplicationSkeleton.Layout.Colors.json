@@ -1,0 +1,226 @@
+{
+	"type": "object",
+
+	"properties": {
+		"layout.colorPalette": {
+            "group": "layout",
+			"type": "array",
+			"title": "Color Palettes",
+			"docRef": "bridgehead_4667037557",
+			"description": "Color palettes maps a color defined in a netsuite list to a CSS color value. Then, one or more color can use a palette to show the values. <br/>Use this table to modify default color palette or create new ones. <br/><b>IMPORTANT: </b>",
+			"items": {
+				"type": "object",
+				"properties": {
+					"paletteId": {
+						"type": "string",
+						"title": "Palette id",
+						"description": "The palette id for this color",
+						"mandatory": true
+					}
+				,   "colorName": {
+						"type": "string",
+						"title": "Color name",
+						"description": "The color name as it is in the netsuite list used in the declaration.",
+						"mandatory": true
+					}
+				,   "colorValue": {
+						"type": "string",
+						"title": "Color value",
+						"description": "The color CSS value - must be a valid CSS color. "
+					}
+
+				,   "imgsrc": {
+						"type": "string",
+						"title": "Image Source",
+						"description": "Source of an external image."
+					}
+				,   "imgheight": {
+						"type": "string",
+						"title": "Image Height",
+						"description": "Heigh with its unit of the specified image."
+					}
+				,   "imgwidth": {
+						"type": "string",
+						"title": "Image Width",
+						"description": "Width with its unit of the specified image."
+					}
+				}
+			},
+
+			"default":[
+				{
+					"paletteId": "default",
+					"colorName": "Black",
+					"colorValue": "#212121",
+					"imgsrc":"/images/swatches/Black Swatch.jpg"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "White",
+					"colorValue": "#FCFAF1",
+					"isLightColor":true,
+					"imgsrc":"/images/swatches/White Swatch.jpg"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Red",
+					"colorValue": "#BF1932",
+					"imgsrc":"/images/swatches/Red Swatch.jpg"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Green",
+					"colorValue": "#609E57",
+					"imgsrc":"/images/swatches/Green Swatch.jpg"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Blue",
+					"colorValue": "#02AAD5",
+					"imgsrc":"/images/swatches/Blue Swatch.jpg"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Cream",
+					"colorValue": "#FFFACD",
+					"isLightColor":true,
+					"imgsrc":"/images/swatches/Cream Swatch.jpg"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Black and White",
+					"colorValue": "#212121;#FCFAF1",
+					"imgsrc":"/images/swatches/Black and White Swatch.jpg"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Berry",
+					"colorValue": "#872657",
+					"imgsrc":"/images/swatches/Berry Swatch.jpg"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Nude",
+					"colorValue": "#F4D5BB",
+					"isLightColor":true
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Plum",
+					"colorValue": "#3E262A",
+					"imgsrc":"/images/swatches/Plum Swatch.jpg"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Burgundy",
+					"colorValue": "#CD5C5C"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Black Multi",
+					"colorValue": "#212121;#FF0000",
+					"imgsrc":"/images/swatches/Black Multi.jpg"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Pink",
+					"colorValue": "#F7CACA",
+					"isLightColor":true,
+					"imgsrc":"/images/swatches/Pink Swatch.jpg"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Sparkly",
+					"colorValue": "#BBB;#EEE",
+					"isLightColor":true
+				},{
+					"paletteId": "default",
+					"colorName": "Sable",
+					"colorValue": "#a27f5f",
+					"imgsrc":"/images/swatches/Sable Swatch.jpg"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Ivory",
+					"colorValue": "#EEEEE0",
+					"isLightColor":true,
+					"imgsrc":"/images/swatches/Ivory Swatch.jpg"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Peach",
+					"colorValue": "#FFDAB9",
+					"imgsrc":"/images/swatches/Peach Swatch.jpg"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Black and Gold",
+					"colorValue": "#212121;#FFD700",
+					"imgsrc":"/images/swatches/Black and Gold Swatch.jpg"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Silver",
+					"colorValue": "#999",
+					"isLightColor":true
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Blush",
+					"colorValue": "#FFEBCD",
+					"isLightColor":true
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Black and Nude",
+					"colorValue": "#212121;#F4D5BB"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Navy and Yellow",
+					"colorValue": "#000080;#FFFF00"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Black and Cream",
+					"colorValue": "#212121;#FFFACD"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Gold",
+					"colorValue": "#FFD700",
+					"isLightColor":true
+				},{
+					"paletteId": "default",
+					"colorName": "Blue and Black",
+					"colorValue": "#02AAD5;#212121"
+				},{
+					"paletteId": "default",
+					"colorName": "Yellow",
+					"colorValue": "#FFFF00",
+					"isLightColor":true
+				},{
+					"paletteId": "default",
+					"colorName": "Mint",
+					"colorValue": "#BDFCC9",
+					"isLightColor":true
+				}
+			]
+		}
+	,   "layout.lightColors": {
+            "group": "layout",
+			"title": "Light colors",
+			"docRef": "section_4701517042",
+			"description": "The light colors in the color palette",
+			"type": "array",
+			"items": {
+				"type": "string",
+				"title": "Color Name"
+			},
+			"default": [
+			   "white"
+			]
+		}
+	}
+
+}

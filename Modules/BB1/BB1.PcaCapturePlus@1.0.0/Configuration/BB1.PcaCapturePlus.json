@@ -1,0 +1,28 @@
+{
+	"type": "object",
+    "subtab": {
+        "id": "pcaCapturePlus",
+        "group": "integrations",
+        "title": "PostcodeAnywhere Capture+ Settings",
+        "docRef": "bridgehead_3487384788334",
+        "description": "Postcode Anywhere Capture+ related configuration"
+    },
+    "properties": {
+        "pcaCapturePlus.enabled": {
+            "group": "integrations",
+            "subtab": "pcaCapturePlus",
+            "type": "boolean",
+            "title": "Enable PostcodeAnywhere Capture+",
+            "description": "Select if the PostcodeAnywhere Capture+ application should be enabled.",
+            "default": true
+        },
+        "pcaCapturePlus.apiKey": {
+            "group": "integrations",
+            "subtab": "pcaCapturePlus",
+            "type": "string",
+            "title": "PostcodeAnywhere Capture+ API Key",
+            "description": "Enter the PostcodeAnywhere Capture+ API Key.",
+            "default": "UJ27-AA35-JG54-YR39"
+        }
+    }
+}

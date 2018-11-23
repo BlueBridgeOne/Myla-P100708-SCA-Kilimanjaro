@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Domaine';
+    src: url('../fonts/DomaineDisplayWeb-Medium.eot');
+    src: url('../fonts/DomaineDisplayWeb-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DomaineDisplayWeb-Medium.woff2') format('woff2'),
+         url('../fonts/DomaineDisplayWeb-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+$Domaine-font:'Domaine', 'Times New Roman', serif;
+h1, h2, h3, h4, h5, h6 {
+    font-family: $Domaine-font;
+}

@@ -1,0 +1,38 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"styles.css",
+				"*.min.js",
+				"payload.json",
+				"*.tpl.js",
+				"Macros.js",
+				"*.map",
+				"gulpfile.js",
+				"package.json",
+				"release.xml",
+				"templates-manifest-checkout.json",
+				"templates-manifest-myaccount.json",
+				"templates-manifest-shopping.json",
+				"version.txt",
+				"Modules/BB1/distro.json"
+			],
+			"folder_exclude_patterns":
+			[
+				"Backups",
+				"node_modules",
+				"processed-macros/raw",
+				"LocalDistribution/sass",
+				"DeployDistribution",
+				"gulp",
+				"ns_npm_repository",
+				"Modules/third_parties",
+				"LocalDistribution",
+				"Modules/extensions"
+			],
+			"path": "."
+		}
+	]
+}

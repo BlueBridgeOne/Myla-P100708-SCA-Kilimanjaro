@@ -1,0 +1,36 @@
+{
+	"gulp":
+	{
+		"javascript": [
+			"JavaScript/*"
+		],
+		"templates": [
+			"Templates/*"
+		],
+		"sass": [
+			"Sass/**/*.scss"
+		],
+		"configuration": [
+			"Configuration/*.json"
+		]
+	},
+	"overrides":
+	{
+		"suitecommerce/BaseSassStyles@3.0.0/Sass/base/_base.scss": "Sass/base/_base.scss",
+		"suitecommerce/BaseSassStyles@3.0.0/Sass/base/_reset.scss": "Sass/base/_reset.scss",
+		"suitecommerce/BaseSassStyles@3.0.0/Sass/base/_bootstrap-overrides.scss": "Sass/base/_bootstrap-overrides.scss",
+		"suitecommerce/BaseSassStyles@3.0.0/Sass/molecules/_item-cells.scss": "Sass/molecules/_item-cells.scss",
+		"suitecommerce/BaseSassStyles@3.0.0/Sass/molecules/_search.scss": "Sass/molecules/_search.scss",
+		"suitecommerce/BaseSassStyles@3.0.0/Sass/variables/_colors.scss": "Sass/variables/_colors.scss",
+		"suitecommerce/BaseSassStyles@3.0.0/Sass/variables/_typography.scss": "Sass/variables/_typography.scss",
+		"suitecommerce/BaseSassStyles@3.0.0/Sass/atoms/_typography.scss": "Sass/atoms/_typography.scss",
+		"suitecommerce/BaseSassStyles@3.0.0/Sass/atoms/_buttons.scss": "Sass/atoms/_buttons.scss",
+		"suitecommerce/BaseSassStyles@3.0.0/Sass/atoms/_messages.scss": "Sass/atoms/_messages.scss",
+		"suitecommerce/BaseSassStyles@3.0.0/Sass/atoms/_forms.scss": "Sass/atoms/_forms.scss",
+		"suitecommerce/BaseSassStyles@3.0.0/Sass/atoms/_purchase-controls.scss": "Sass/atoms/_purchase-controls.scss",
+		"suitecommerce/BaseSassStyles@3.0.0/Sass/base/_spacing.scss": "Sass/base/_spacing.scss",
+		"third_parties/twitter-bootstrap-sass@3.3.1/assets/stylesheets/bootstrap/_variables.scss": "Sass/variables/_bootstrapvariables.scss",
+		"third_parties/twitter-bootstrap-sass@3.3.1/assets/stylesheets/bootstrap/mixins/_grid.scss": "Sass/base/_mixins_grid.scss",
+		"third_parties/twitter-bootstrap-sass@3.3.1/assets/stylesheets/bootstrap/mixins/_grid-framework.scss": "Sass/base/_mixins_grid-framework.scss"
+	}
+}

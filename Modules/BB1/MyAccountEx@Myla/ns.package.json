@@ -1,0 +1,24 @@
+{
+	"gulp":
+	{
+		"languages": [
+			"Languages/*.js"
+	],
+		"javascript": [
+			"JavaScript/*"
+		],
+		"templates": [
+			"Templates/*"
+		],
+		"sass": [
+			"Sass/**/*.scss"
+		],
+		"configuration": [
+			"Configuration/*.json"
+		]
+	},"overrides":
+  {"suitecommerce/MyAccountApplication@3.2.0/Sass/_myaccount-layout.scss":"Sass/_myaccount-layout.scss",
+	"suitecommerce/MyAccountApplication@3.2.0/Templates/myaccount_layout.tpl":"Templates/myaccount_layout.tpl",
+	"suitecommerce/MyAccountApplication@3.2.0/Languages/en_US.js": "Languages/en_US.js",
+	"suitecommerce/ReturnAuthorization@4.0.1/SuiteScript/ReturnAuthorization.Model.js": "SuiteScript/ReturnAuthorization.Model.js"}
+}

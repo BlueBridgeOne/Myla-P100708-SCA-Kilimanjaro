@@ -1,0 +1,40 @@
+{
+	"gulp":
+	{
+		"languages": [
+            "Languages/*.js"
+		],
+		"javascript": [
+			"JavaScript/*"
+		],
+		"templates": [
+			"Templates/*"
+		],
+		"sass": [
+			"Sass/**/*.scss"
+		],"ssp-libraries": [
+            "SuiteScript/*.js"
+        ],
+		"configuration": [
+			"Configuration/*.json"
+		]
+	},"overrides":
+  {"suitecommerce/MenuTree@2.1.4/Sass/_menu-tree-node.scss": "Sass/_menu-tree-node.scss",
+  "suitecommerce/CheckoutApplication@2.4.0/Sass/_checkout-layout.scss": "Sass/_checkout-layout.scss",
+  "suitecommerce/CheckoutApplication@2.4.0/Templates/checkout_layout.tpl": "Templates/checkout_layout.tpl",
+  "suitecommerce/CheckoutApplication@2.4.0/Languages/en_US.js": "Languages/en_US.js",
+  "suitecommerce/CheckoutApplication@2.4.0/SuiteScript/threedsecure.ssp": "SuiteScript/threedsecure.ssp",
+  "suitecommerce/LoginRegister@2.4.0/Sass/_login-register.scss": "Sass/_login-register.scss",
+  "suitecommerce/LoginRegister@2.4.0/Templates/login_register_register.tpl": "Templates/login_register_register.tpl",
+  "suitecommerce/OrderWizard.Module.Register@2.1.2/JavaScript/OrderWizard.Module.RegisterGuest.js": "JavaScript/OrderWizard.Module.RegisterGuest.js",
+  "suitecommerce/Wizard@2.3.1/JavaScript/Wizard.Step.js": "JavaScript/Wizard.Step.js",
+  "suitecommerce/Wizard@2.3.1/JavaScript/Wizard.Module.js": "JavaScript/Wizard.Module.js",
+  "suitecommerce/Wizard@2.3.1/JavaScript/Wizard.Router.js": "JavaScript/Wizard.Router.js",
+  "suitecommerce/OrderWizard.Module.Confirmation@3.0.1/Sass/_order-wizard-confirmation-module.scss": "Sass/_order-wizard-confirmation-module.scss",
+  "suitecommerce/Transaction.Line.Views@1.2.1/Templates/transaction_line_views_cell_navigable.tpl": "Templates/transaction_line_views_cell_navigable.tpl",
+  "suitecommerce/OrderWizard.Module.PaymentMethod@3.1.0/JavaScript/OrderWizard.Module.PaymentMethod.ThreeDSecure.js": "JavaScript/OrderWizard.Module.PaymentMethod.ThreeDSecure.js",
+  "suitecommerce/OrderWizard.Module.PaymentMethod@3.1.0/JavaScript/OrderWizard.Module.PaymentMethod.Selector.js": "JavaScript/OrderWizard.Module.PaymentMethod.Selector.js",
+  "suitecommerce/OrderWizard.Module.PaymentMethod@3.1.0/Templates/order_wizard_paymentmethod_threedsecure_module.tpl": "Templates/order_wizard_paymentmethod_threedsecure_module.tpl",
+  "suitecommerce/OrderWizard.Module.Shipmethod@3.0.1/JavaScript/OrderWizard.Module.Shipmethod.js": "JavaScript/OrderWizard.Module.Shipmethod.js",
+  "suitecommerce/CreditCard@2.4.1/JavaScript/CreditCard.Edit.View.js": "JavaScript/CreditCard.Edit.View.js"}
+}

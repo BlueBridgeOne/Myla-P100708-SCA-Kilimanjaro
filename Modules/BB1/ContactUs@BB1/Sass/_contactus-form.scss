@@ -1,0 +1,159 @@
+/*===========================================
+
+  BB1 - G Truslove
+
+  Date: Feb 2018
+
+  ===========================================*/
+
+.contactus-container {
+  @extend .container;
+}
+
+.contactus-form {
+  margin: $sc-margin-lv3;
+}
+
+.entry-form {
+  margin-bottom: $sc-margin-lv3;
+  padding: $sc-padding-lv3;
+
+  @media (min-width: $screen-md-min) {
+    margin-bottom: $sc-margin-lv6;
+    padding: $sc-padding-lv6;
+  }
+}
+
+.entry-form-title{
+margin-bottom: $sc-margin-lv3;
+
+  @media (min-width: $screen-md-min) {
+    margin-bottom: $sc-margin-lv6;
+  }
+}
+
+.contactus-firstname,
+.contactus-lastname,
+.contactus-company,
+.contactus-email,
+.contactus-subject,
+.contactus-time,
+.contactus-phone,
+.contactus-message,
+.contactus-address,
+.contactus-address2,
+.contactus-city,
+.contactus-zip,
+.contactus-country,
+.contactus-state {
+  @extend .row;
+
+
+  input {
+    @extend .input-large;
+  }
+}
+
+.contactus-message textarea {
+  display: block;
+  width: 100%;
+}
+
+.contactus-required {
+  @extend .input-required;
+  color:$myla-color-mediumgrey;
+}
+
+.contactus-button-container {
+  @extend .row;
+  margin-top: $sc-margin-lv4;
+  text-align: center;
+}
+
+.contactus-button-submit {
+  @extend .button-primary;
+  @extend .button-large;
+  width: 50%;
+  margin: 0px auto;
+}
+
+.contactus-breakline {
+  background-color: $sc-color-theme-900;
+  margin: $sc-margin-lv2 0;
+}
+
+.contactus-infoiconwidth {
+  width: 70px;
+  text-align: right;
+}
+
+.contactus-icon {
+  @extend .fa;
+  @extend .fa-fw;
+  font-size: 1.3em;
+  color: $sc-color-theme-900
+}
+
+.icon-address {
+  @extend .contactus-icon;
+  @extend %fa-paper-plane;
+}
+
+.icon-phone {
+  @extend .contactus-icon;
+  @extend %fa-phone;
+}
+
+.icon-call {
+  @extend .contactus-icon;
+  @extend %fa-phone;
+  font-size: 1em;
+}
+
+.icon-facebook {
+  @extend .contactus-icon;
+  @extend %fa-facebook;
+}
+
+.icon-instagram {
+  @extend .contactus-icon;
+  @extend %fa-instagram;
+}
+
+.icon-twitter {
+  @extend .contactus-icon;
+  @extend %fa-twitter;
+}
+
+.icon-linkedin {
+  @extend .contactus-icon;
+  @extend %fa-linkedin;
+}
+
+.icon-flag {
+  @extend .contactus-icon;
+  @extend %fa-flag;
+}
+
+.contactus-infotitle {
+@extend h2;
+  width: 100%;
+  background-color: $sc-color-theme-background;
+  color: $sc-color-copy;
+  padding: $sc-padding-lv3;
+}
+.contactus-infotext{
+  padding: $sc-padding-lv3;}
+
+  .contactus-infotext p{color: $sc-color-copy;font-size:1.2em;margin-bottom:$sc-margin-lv1;}
+
+.contactus-messagebody {
+  text-align: center;
+  margin-top: $sc-margin-lv4;
+  margin-bottom: $sc-margin-lv7;
+}
+
+.global-views-countriesDropdown-select,
+.global-views-states-group-select {
+  min-width: 300px;
+}

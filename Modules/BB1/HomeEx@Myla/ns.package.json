@@ -1,0 +1,21 @@
+{
+	"gulp":
+	{
+		"javascript": [
+			"JavaScript/*"
+		],
+		"templates": [
+			"Templates/*"
+		],
+		"sass": [
+			"Sass/**/*.scss"
+		],
+		"configuration": [
+			"Configuration/*.json"
+		]
+	},"overrides":
+  {"suitecommerce/Home@2.2.1/Templates/home.tpl":"Templates/home.tpl",
+"suitecommerce/Home@2.2.1/JavaScript/Home.View.js":"JavaScript/Home.View.js",
+"suitecommerce/Home@2.2.1/JavaScript/Home.Router.js":"JavaScript/Home.Router.js",
+"suitecommerce/Home@2.2.1/Sass/_home.scss":"Sass/_home.scss"}
+}

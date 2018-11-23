@@ -1,0 +1,27 @@
+{
+    "gulp": {
+        "javascript": [
+            "JavaScript/*"
+        ],
+        "images": [
+            "Images/*"
+        ],
+        "templates": [
+            "Templates/*"
+        ],
+        "sass": [
+            "Sass/**/*.scss"
+        ],
+        "ssp-libraries": [
+            "SuiteScript/*.js"
+        ],
+        "configuration": [
+            "Configuration/*.json"
+        ]
+    },
+    "overrides": {
+       "suitecommerce/Address@2.4.3/Templates/address_edit_fields.tpl": "Templates/address_edit_fields.tpl",
+       "suitecommerce/GlobalViews@1.4.1/Templates/global_views_states.tpl": "Templates/global_views_states.tpl",
+       "suitecommerce/Address@2.4.3/JavaScript/Address.Edit.View.js": "JavaScript/Address.Edit.View.js"
+    }
+}

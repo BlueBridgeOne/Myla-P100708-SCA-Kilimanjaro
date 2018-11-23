@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "subtab":
+  {
+    "id": "contentGroupsCollectionA",
+    "title": "Collection A",
+    "group": "contentGroupsTab"
+  },
+  "properties":
+  {
+    "contentGroups.collectiona":
+    {
+      "group": "contentGroupsTab",
+      "subtab": "contentGroupsCollectionA",
+      "type": "array",
+      "title": "Collection A",
+      "description": "A list of all the groups used in a collection.",
+      "items":
+      {
+        "type": "object",
+        "properties":
+        {
+
+          "groupTemplate":
+          {
+            "type": "string",
+            "title": "Group",
+            "source": "$resource.fields.groupTemplates"
+          }
+
+        }
+        },
+        "default": [
+        {"groupTemplate":"PROMO CELL GROUP x3 RIGHT"},
+        {"groupTemplate":"PROMO CELL GROUP x3 LEFT"},
+        {"groupTemplate":"PROMO CELL GROUP x2 RIGHT"},
+        {"groupTemplate":"PROMO CELL GROUP x2 LEFT"}
+        ]
+      }
+    }
+  }

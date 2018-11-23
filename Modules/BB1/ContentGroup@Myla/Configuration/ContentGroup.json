@@ -1,0 +1,53 @@
+{
+  "type": "object",
+  "group":
+  {
+    "id": "contentGroupsTab",
+    "title": "Content Groups",
+    "description": "All the available lists of content groups."
+  },
+  "subtab":
+  {
+    "id": "contentGroupsHome",
+    "title": "Home",
+    "group": "contentGroupsTab"
+  },
+  
+  "resource": {
+  "fields": {
+        "groupTemplates": ["PRODUCT & CONTENT CELL x3 LEFT", "PRODUCT & CONTENT CELL x3 RIGHT", "PRODUCT & PROMO CELL x3 LEFT", "PRODUCT & PROMO CELL x3 RIGHT", "COLLECTION CELL GROUP x3 LEFT", "COLLECTION CELL GROUP x3 RIGHT", "PRODUCT & CONTENT CELL x5 LEFT", "PRODUCT & CONTENT CELL x5 RIGHT", "PRODUCT & PROMO CELL x5 LEFT", "PRODUCT & PROMO CELL x5 RIGHT","PRODUCT CELL x5 LEFT","PRODUCT CELL x5 RIGHT", "PRODUCT CELL x2 LARGE LEFT", "PRODUCT CELL x2 LARGE RIGHT", "PRODUCT CELL x2 SMALL LEFT", "PRODUCT CELL x2 SMALL RIGHT", "PRODUCT CELL x4", "PROMO CELL GROUP x2 LEFT", "PROMO CELL GROUP x2 RIGHT", "PRODUCT CELL GROUP x2 LEFT", "PRODUCT CELL GROUP x2 RIGHT", "PROMO CELL GROUP x3 LEFT", "PROMO CELL GROUP x3 RIGHT", "HOME GROUP x3 LEFT", "HOME GROUP x3 RIGHT","HOME x3 LEFT", "HOME x3 RIGHT","HOME x2 LEFT", "HOME x2 RIGHT","CONTENT TEXT"]
+        }
+        ,"old":["CONTENT CELL 4 : 3", "CONTENT CELL LANDSCAPE"]
+    },
+  "properties":
+  {
+    "contentGroups.home":
+    {
+      "group": "contentGroupsTab",
+      "subtab": "contentGroupsHome",
+      "type": "array",
+      "title": "Home",
+      "description": "A list of all the groups used on the home page.",
+      "items":
+      {
+        "type": "object",
+        "properties":
+        {
+
+          "groupTemplate":
+          {
+            "type": "string",
+            "title": "Group",
+            "source": "$resource.fields.groupTemplates"
+          }
+
+        }
+        },
+        "default": [
+          {"groupTemplate":"HOME x3 LEFT"},
+          {"groupTemplate":"HOME x2 LEFT"}
+        ]
+      }
+      
+    }
+  }

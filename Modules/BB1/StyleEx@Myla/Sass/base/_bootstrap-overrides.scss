@@ -1,0 +1,42 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+
+   .container{
+   	width:100%;
+     max-width:$container-lg;
+     padding:0;
+   }
+    .container-padded{
+    width:100%;
+     max-width:$container-lg;
+     padding-top:0;
+     padding-bottom:0;
+     @include variable-gutter("padding-left",1);
+     @include variable-gutter("padding-right",1);
+   }
+
+
+@media (max-width:  $screen-sm-min) {
+  body.modal-open {
+    position: fixed;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.modal-backdrop {
+  position: fixed;
+}
+
+[data-dropdown-content] {
+	display:none;
+}
+
+.open [data-dropdown-content] {
+	display: block;
+}

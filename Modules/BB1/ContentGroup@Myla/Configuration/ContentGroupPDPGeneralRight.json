@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "subtab":
+  {
+    "id": "contentGroupsPDPGeneralRight",
+    "title": "PDP General Right",
+    "group": "contentGroupsTab"
+  },
+  "properties":
+  {
+    "contentGroups.pdpgeneralright":
+    {
+      "group": "contentGroupsTab",
+      "subtab": "contentGroupsPDPGeneralRight",
+      "type": "array",
+      "title": "PDP General Right",
+      "description": "A list of all the groups used in a promo item.",
+      "items":
+      {
+        "type": "object",
+        "properties":
+        {
+
+          "groupTemplate":
+          {
+            "type": "string",
+            "title": "Group",
+            "source": "$resource.fields.groupTemplates"
+          }
+
+        }
+        },
+        "default": [
+        {"groupTemplate":"PRODUCT CELL GROUP x2 LEFT"},
+        {"groupTemplate":"PRODUCT CELL GROUP x2 RIGHT"}
+        ]
+      }
+    }
+  }

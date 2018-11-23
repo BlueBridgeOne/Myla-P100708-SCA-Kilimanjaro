@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "subtab":
+  {
+    "id": "contentGroupsPLPBLeft",
+    "title": "PLP B Left",
+    "group": "contentGroupsTab"
+  },
+  "properties":
+  {
+    "contentGroups.plpbleft":
+    {
+      "group": "contentGroupsTab",
+      "subtab": "contentGroupsPLPBLeft",
+      "type": "array",
+      "title": "PLP B Left",
+      "description": "A list of all the groups used in a category.",
+      "items":
+      {
+        "type": "object",
+        "properties":
+        {
+
+          "groupTemplate":
+          {
+            "type": "string",
+            "title": "Group",
+            "source": "$resource.fields.groupTemplates"
+          }
+
+        }
+        },
+        "default": [
+        {"groupTemplate":"PRODUCT & CONTENT CELL x3 RIGHT"},
+        {"groupTemplate":"PRODUCT CELL x4"},
+        {"groupTemplate":"PRODUCT CELL x4"},
+        {"groupTemplate":"PRODUCT & CONTENT CELL x5 LEFT"}
+        ]
+      }
+    }
+  }

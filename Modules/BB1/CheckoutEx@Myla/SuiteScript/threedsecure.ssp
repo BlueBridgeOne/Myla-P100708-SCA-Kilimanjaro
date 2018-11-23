@@ -1,0 +1,48 @@
+<%/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/%>
+
+<%
+	var confirmation
+	,	order_info;
+	Application = require('Application');
+	LiveOrderModel = require('LiveOrder.Model');
+
+	try {
+nlapiLogExecution("DEBUG","3D Secure","submit");
+		// Submit the order
+		confirmation = LiveOrderModel.submit(true);
+		nlapiLogExecution("DEBUG","3D Secure","confirmation="+JSON.stringify(confirmation));
+		// Get the new order
+		order_info = LiveOrderModel.get();
+		nlapiLogExecution("DEBUG","3D Secure","order_info="+JSON.stringify(order_info));
+		// Set the confirmation
+		order_info.confirmation = confirmation;
+
+	}
+	catch(e)
+	{
+		nlapiLogExecution("DEBUG","3D Secure","error="+e);
+		order_info = {};
+		confirmation = Application.processError(e);
+		nlapiLogExecution("DEBUG","3D Secure","error confirmation="+JSON.stringify(confirmation));
+	}
+
+	order_info.confirmation = confirmation;
+
+%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>3D Secure Authentication</title>
+</head>
+<body>
+<script type="text/javascript">
+	parent.process3DSecure(<%= JSON.stringify(order_info) %>);
+</script>
+</body>
+</html>

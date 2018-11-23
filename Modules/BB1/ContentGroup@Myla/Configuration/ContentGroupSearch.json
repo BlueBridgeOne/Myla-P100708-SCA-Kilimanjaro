@@ -1,0 +1,39 @@
+{
+    "type": "object",
+    "subtab":
+    {
+        "id": "contentGroupsSearch",
+        "title": "Search",
+        "group": "contentGroupsTab"
+    },
+    "properties":
+    {
+        "contentGroups.search":
+        {
+            "group": "contentGroupsTab",
+            "subtab": "contentGroupsSearch",
+            "type": "array",
+            "title": "Search",
+            "description": "A list of all the groups used in a search.",
+            "items":
+            {
+                "type": "object",
+                "properties":
+                {
+
+                    "groupTemplate":
+                    {
+                        "type": "string",
+                        "title": "Group",
+                        "source": "$resource.fields.groupTemplates"
+                    }
+
+                }
+            },
+            "default": [
+            {
+                "groupTemplate": "PRODUCT CELL x4"
+            }]
+        }
+    }
+}

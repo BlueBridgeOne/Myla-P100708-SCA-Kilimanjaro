@@ -1,0 +1,21 @@
+{
+	"gulp":
+	{
+		"javascript": [
+			"JavaScript/*"
+		],
+		"templates": [
+			"Templates/*"
+		],
+		"sass": [
+			"Sass/**/*.scss"
+		],
+		"configuration": [
+			"Configuration/*.json"
+		],
+        "ssp-libraries": [
+            "SuiteScript/Tools.js"
+        ]
+	},"overrides":
+  {}
+}

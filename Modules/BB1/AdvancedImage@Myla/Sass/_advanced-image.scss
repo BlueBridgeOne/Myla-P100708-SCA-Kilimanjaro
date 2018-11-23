@@ -1,0 +1,166 @@
+.cms-content-bb1_cct_advanced_image {
+  // template outer container needs class
+}
+
+.advanced-image-container{
+  position: relative !important;
+  overflow: hidden !important;
+  width:100% !important;
+  height:100% !important;
+}
+
+.text-container{
+  position: absolute !important;
+  padding: $sc-padding-lv4 !important;
+  z-index: 1 !important;
+}
+
+/* Anchored Image  */
+.bgimage-anc-child{
+  overflow:hidden;
+}
+.bgimage-anc-child-0{
+  width:100%;
+  height:100%;
+  background-repeat:no-repeat;
+  background-position:center center;
+  }
+  .bgimage-anc-child-1{
+    @extend .bgimage-anc-child-0;
+    background-position:center top;
+  }
+  .bgimage-anc-child-2{
+    @extend .bgimage-anc-child-0;
+    background-position:right top;
+  }
+  .bgimage-anc-child-3{
+    @extend .bgimage-anc-child-0;
+    background-position:right center;
+  }
+  .bgimage-anc-child-4{
+    @extend .bgimage-anc-child-0;
+    background-position:right bottom;
+  }
+  .bgimage-anc-child-5{
+    @extend .bgimage-anc-child-0;
+    background-position:center bottom;
+  }
+  .bgimage-anc-child-6{
+    @extend .bgimage-anc-child-0;
+    background-position:left bottom;
+  }
+  .bgimage-anc-child-7{
+    @extend .bgimage-anc-child-0;
+    background-position:left center;
+  }
+  .bgimage-anc-child-8{
+    @extend .bgimage-anc-child-0;
+    background-position:left top;
+  }
+  .bgimage-anc-child-9{
+    @extend .bgimage-anc-child-0;
+  }
+  .bgimage-anc-child-10{
+    @extend .bgimage-anc-child-0;
+    background-position:right top;
+    @media (max-width: $screen-sm-min) {
+      background-position:75% top;
+    }
+  }
+  .bgimage-anc-child-11{
+    @extend .bgimage-anc-child-0;
+    background-position:right center;
+    @media (max-width: $screen-sm-min) {
+      background-position:75% center;
+    }
+  }
+  .bgimage-anc-child-12{
+    @extend .bgimage-anc-child-0;
+    background-position:right bottom;
+    @media (max-width: $screen-sm-min) {
+      background-position:75% bottom;
+    }
+  }
+  .bgimage-anc-child-13{
+    @extend .bgimage-anc-child-0;
+    background-position:left bottom;
+    @media (max-width: $screen-sm-min) {
+      background-position:25% bottom;
+    }
+  }
+  .bgimage-anc-child-14{
+    @extend .bgimage-anc-child-0;
+    background-position:left center;
+    @media (max-width: $screen-sm-min) {
+      background-position:25% center;
+    }
+  }
+  .bgimage-anc-child-15{
+    @extend .bgimage-anc-child-0;
+    background-position:left top;
+    @media (max-width: $screen-sm-min) {
+      background-position:25% top;
+    }
+  }
+
+
+  .bgimage-anc-child-16{
+    @extend .bgimage-anc-child-0;
+    background-position:center top;
+    @media (max-width: $screen-sm-min) {
+      background-position:center 25%;
+    }
+  }
+  .bgimage-anc-child-17{
+    @extend .bgimage-anc-child-0;
+    background-position:right top;
+    @media (max-width: $screen-sm-min) {
+      background-position:75% 25%;
+    }
+  }
+  .bgimage-anc-child-18{
+    @extend .bgimage-anc-child-0;
+    background-position:Right bottom;
+    @media (max-width: $screen-sm-min) {
+      background-position:75% 75%;
+    }
+  }
+  .bgimage-anc-child-19{
+    @extend .bgimage-anc-child-0;
+    background-position:center bottom;
+    @media (max-width: $screen-sm-min) {
+      background-position:center 75%;
+    }
+  }
+  .bgimage-anc-child-20{
+    @extend .bgimage-anc-child-0;
+    background-position:left bottom;
+    @media (max-width: $screen-sm-min) {
+      background-position:25% 75%;
+    }
+  }
+  .bgimage-anc-child-21{
+    @extend .bgimage-anc-child-0;
+    background-position:left top;
+    @media (max-width: $screen-sm-min) {
+      background-position:25% 25%;
+    }
+  }
+
+  .bgimage-anc-child-22{
+    @extend .bgimage-anc-child-0;
+  }
+
+.bb1_cct_advanced_image-light{color:$myla-color-darkgrey;}
+.bb1_cct_advanced_image-dark{color:$myla-color-white;}
+
+.bb1_cct_advanced_image-inset_landscape{
+  padding-top:33%;
+  background-size:100% auto;
+  background-position:center center;
+  -webkit-backface-visibility: hidden; 
+    -ms-transform: translateZ(0); /* IE 9 */
+    -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+    transform: translateZ(0);
+}
+

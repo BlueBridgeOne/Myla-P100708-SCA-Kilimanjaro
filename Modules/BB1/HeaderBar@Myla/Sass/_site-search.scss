@@ -1,0 +1,75 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.site-search {
+	@extend .nav-search;
+	margin-top:3%;
+	margin-bottom:7%;
+	border:0;
+	@media (max-width: $screen-xs-max) {
+	margin-top:0;
+	margin-bottom:0;
+	}
+}
+
+.site-search-content {
+	@extend .nav-search-content;
+}
+
+.site-search-content-form {
+}
+
+.site-search-content-input {
+	@extend .nav-search-content-input;
+	.itemssearcher-input {
+		border: none;
+}
+	.itemssearcher-input:focus{
+		outline:none;
+		outline-style:none;
+		box-shadow:none;
+		border-color:transparent;
+	}
+
+	padding-left:$sc-margin-lv3;
+padding-right:$sc-margin-lv3;
+}
+
+.site-search-input-icon {
+	width:24px;
+	height:24px;
+}
+.site-search-box{
+@extend .inline-list;
+width:100%;
+border-bottom:1px solid $myla-color-lightgrey;
+@media (max-width: $screen-xs-max) {
+margin-bottom:5px;
+}
+}
+
+.site-search-input-reset {
+	@extend .nav-search-input-reset;
+	display:block;
+}
+
+.site-search-button-submit {
+	@extend .nav-search-button-submit;
+	border-radius: $sc-border-radius;
+}
+
+.site-search-button-close {
+	@extend .nav-search-button-close;
+}
+
+.site-search-input-reset-icon {
+	@extend .nav-search-input-reset-icon;
+}
+.site-search-content-icon-container{
+vertical-align:top!important;
+svg{margin-top:15px;}
+}

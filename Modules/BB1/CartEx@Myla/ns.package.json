@@ -1,0 +1,40 @@
+{
+	"gulp":
+	{
+		"javascript": [
+			"JavaScript/*"
+		],
+		"templates": [
+			"Templates/*"
+		],
+		"sass": [
+			"Sass/**/*.scss"
+		],
+		"configuration": [
+			"Configuration/*.json"
+		]
+	},"overrides":
+  {"suitecommerce/Cart@4.3.0/Sass/_cart-add-to-cart-button.scss": "Sass/_cart-add-to-cart-button.scss",
+  "suitecommerce/Cart@4.3.0/Sass/_cart-confirmation-modal.scss": "Sass/_cart-confirmation-modal.scss",
+  "suitecommerce/Cart@4.3.0/Sass/_cart-detailed.scss": "Sass/_cart-detailed.scss",
+  "suitecommerce/Cart@4.3.0/Sass/_cart-summary.scss": "Sass/_cart-summary.scss",
+  "suitecommerce/OrderWizard.Module.CartSummary@4.0.1/Sass/_order-wizard-cart-summary.scss": "Sass/_order-wizard-cart-summary.scss",
+  "suitecommerce/OrderWizard.Module.CartSummary@4.0.1/Templates/order_wizard_cart_summary.tpl": "Templates/order_wizard_cart_summary.tpl",
+  "suitecommerce/OrderWizard.Module.CartSummary@4.0.1/JavaScript/OrderWizard.Module.CartSummary.js": "JavaScript/OrderWizard.Module.CartSummary.js",
+  "suitecommerce/Cart@4.3.0/Sass/_cart.scss": "Sass/_cart.scss",
+  "suitecommerce/Cart@4.3.0/Templates/cart_detailed.tpl": "Templates/cart_detailed.tpl",
+  "suitecommerce/Cart@4.3.0/Templates/cart_summary.tpl": "Templates/cart_summary.tpl",
+  "suitecommerce/Cart@4.3.0/Templates/cart_item_summary.tpl": "Templates/cart_item_summary.tpl",
+  "suitecommerce/Cart@4.3.0/JavaScript/Cart.Detailed.View.js": "JavaScript/Cart.Detailed.View.js",
+  "suitecommerce/Cart@4.3.0/JavaScript/Cart.Summary.View.js": "JavaScript/Cart.Summary.View.js",
+  "suitecommerce/Cart@4.3.0/JavaScript/Cart.Lines.View.js": "JavaScript/Cart.Lines.View.js",
+  "suitecommerce/Cart@4.3.0/JavaScript/Cart.Confirmation.View.js": "JavaScript/Cart.Confirmation.View.js",
+  "suitecommerce/Header@1.3.1/Templates/header_mini_cart.tpl": "Templates/header_mini_cart.tpl",
+  "suitecommerce/Header@1.3.1/Templates/header_mini_cart_item_cell.tpl": "Templates/header_mini_cart_item_cell.tpl",
+  "suitecommerce/Header@1.3.1/JavaScript/Header.MiniCartItemCell.View.js": "JavaScript/Header.MiniCartItemCell.View.js",
+  "suitecommerce/Header@1.3.1/JavaScript/Header.MiniCart.View.js": "JavaScript/Header.MiniCart.View.js",
+  "suitecommerce/ProductList@3.0.3/JavaScript/ProductList.DetailsLaterMacro.View.js": "JavaScript/ProductList.DetailsLaterMacro.View.js",
+  "suitecommerce/Header@1.3.1/Sass/_header.scss": "Sass/_header.scss",
+  "suitecommerce/Header@1.3.1/Sass/_header-mini-cart.scss": "Sass/_header-mini-cart.scss",
+  "suitecommerce/Header@1.3.1/Sass/_header-mini-cart-item-cell.scss": "Sass/_header-mini-cart-item-cell.scss"}
+}

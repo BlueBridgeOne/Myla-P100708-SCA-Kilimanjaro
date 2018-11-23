@@ -1,0 +1,71 @@
+{
+    "type": "object",
+    "subtab":
+    {
+        "id": "footer",
+        "title": "Footer",
+        "description": "Footer settings",
+        "docRef": "bridgehead_4393101142",
+        "group": "layout"
+    },
+    "properties":
+    {
+        "footer.navigationLinks":
+        {
+            "group": "layout",
+            "subtab": "footer",
+            "type": "array",
+            "title": "Footer navigation",
+            "description": "Footer navigation links that goes in the footer",
+            "items":
+            {
+                "type": "object",
+                "properties":
+                {
+                    "text":
+                    {
+                        "type": "string",
+                        "title": "Text",
+                        "description": ""
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "href",
+                        "description": "The href of the link - for example '/search' will go to the search results page. It's ignored for parent entries.  Also it could be an absolute URL like https://google.com but in that case, make sure you really need to break the single page application. "
+                    },
+                    "dataTouchpoint": {
+                        "type": "string",
+                        "title": "data-touchpoint",
+                        "description": "data-touchpoint value for the link if any",
+                        "enum": ["home", "login", "register", "logout", "customercenter", "viewcart", "checkout", ""]
+                    }
+                }
+            },
+            "default": [
+            {
+                "text": "FAQ",
+                "href": "/faq",
+                "dataTouchpoint":"home"
+            },{
+                "text": "Delivery & Returns",
+                "href": "/delivery",
+                "dataTouchpoint":"home"
+            },
+            {
+                "text": "Terms of Use",
+                "href": "/terms",
+                "dataTouchpoint":"home"
+            },
+            {
+                "text": "Privacy Policy",
+                "href": "/privacy",
+                "dataTouchpoint":"home"
+            },
+            {
+                "text": "Contact Us",
+                "href": "/contact-us",
+                "dataTouchpoint":"home"
+            }]
+        }
+    }
+}

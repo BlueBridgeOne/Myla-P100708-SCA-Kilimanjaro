@@ -1,0 +1,68 @@
+/*===========================================
+
+  BB1 - G Truslove
+
+  Date: Jun 2018
+
+  ===========================================*/
+
+.newsletter-container {
+  @extend .container;
+overflow:hidden;
+padding-top: 3%;
+    padding-bottom: 5%;
+}
+
+.newsletter-form {
+  margin: $sc-margin-lv3 auto;
+  width:300px;
+  max-width:100%;
+  text-align:left;
+  input[type="text"]{width:100%;}
+  button{width:100%;}
+}
+
+.newsletter-entry-form{
+text-align:center;
+}
+
+.entry-form-title{
+margin-bottom: $sc-margin-lv3;
+
+  @media (min-width: $screen-md-min) {
+    margin-bottom: $sc-margin-lv6;
+  }
+}
+
+.newsletter-firstname,
+.newsletter-lastname,
+.newsletter-company,
+.newsletter-email{
+  @extend .row;
+
+
+  input {
+    @extend .input-large;
+  }
+}
+
+.newsletter-required {
+  @extend .input-required;
+  text-align:right;
+}
+
+.newsletter-button-container {
+  @extend .row;
+  margin-top: $sc-margin-lv4;
+  text-align: center;
+}
+
+.newsletter-button-submit {
+  @extend .button-primary;
+  @extend .button-large;
+  width: 50%;
+  margin: 0px auto;
+  @media (max-width: $screen-xs-max) {
+    width: 100%;
+  }
+}

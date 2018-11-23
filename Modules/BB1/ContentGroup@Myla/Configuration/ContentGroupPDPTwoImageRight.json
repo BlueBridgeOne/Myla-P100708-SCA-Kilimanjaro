@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "subtab":
+  {
+    "id": "contentGroupsPDPTwoImageRight",
+    "title": "PDP Two Image Right",
+    "group": "contentGroupsTab"
+  },
+  "properties":
+  {
+    "contentGroups.pdptwoimageright":
+    {
+      "group": "contentGroupsTab",
+      "subtab": "contentGroupsPDPTwoImageRight",
+      "type": "array",
+      "title": "PDP Two Image Right",
+      "description": "A list of all the groups used in a promo item.",
+      "items":
+      {
+        "type": "object",
+        "properties":
+        {
+
+          "groupTemplate":
+          {
+            "type": "string",
+            "title": "Group",
+            "source": "$resource.fields.groupTemplates"
+          }
+
+        }
+        },
+        "default": [
+        {"groupTemplate":"PRODUCT CELL GROUP x2 RIGHT"}
+        ]
+      }
+    }
+  }

@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "subtab":
+  {
+    "id": "contentGroupsPDPDetailLeft",
+    "title": "PDP Detail Left",
+    "group": "contentGroupsTab"
+  },
+  "properties":
+  {
+    "contentGroups.pdpdetailleft":
+    {
+      "group": "contentGroupsTab",
+      "subtab": "contentGroupsPDPDetailLeft",
+      "type": "array",
+      "title": "PDP Detail Left",
+      "description": "A list of all the groups used in a promo item.",
+      "items":
+      {
+        "type": "object",
+        "properties":
+        {
+
+          "groupTemplate":
+          {
+            "type": "string",
+            "title": "Group",
+            "source": "$resource.fields.groupTemplates"
+          }
+
+        }
+        },
+        "default": [
+        {"groupTemplate":"PRODUCT CELL x2 LARGE RIGHT"},
+        {"groupTemplate":"PRODUCT CELL x2 SMALL LEFT"}
+        ]
+      }
+    }
+  }

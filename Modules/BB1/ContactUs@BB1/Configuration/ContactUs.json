@@ -1,0 +1,162 @@
+{
+  "type": "object"
+
+    ,
+  "subtab":
+  {
+    "id": "contactUs",
+    "title": "Contact Us",
+    "group": "shoppingApplication"
+  }
+
+  ,
+  "properties":
+  {
+    "contactUs.enabled":
+    {
+      "group": "shoppingApplication",
+      "subtab": "contactUs",
+      "type": "boolean",
+      "title": "Enabled",
+      "default": true
+    },
+    "contactUs.usecompanies":
+    {
+      "group": "shoppingApplication",
+      "subtab": "contactUs",
+      "type": "boolean",
+      "title": "Create Customers as Companies",
+      "default": false
+    },
+    "contactUs.notify":
+    {
+      "group": "shoppingApplication",
+      "subtab": "contactUs",
+      "type": "string",
+      "title": "Notify E-Mail Address",
+      "default": "info@myla.com"
+    },
+    "contactUs.spam":
+    {
+      "group": "shoppingApplication",
+      "subtab": "contactUs",
+      "type": "array",
+      "title": "Spam Phrases",
+      "description": "Any messages that include these phrases will be considered spam.",
+      "items":
+      {
+        "type": "object",
+        "properties":
+        {
+
+          "phrase":
+          {
+            "type": "string",
+            "title": "Phrase",
+            "description": "The phrase that will be blocked.",
+            "mandatory": true
+          }
+        }
+      },
+      "default": [
+      {
+        "phrase": "1st place on google"
+      }]
+    },
+    "contactUs.companies":
+    {
+      "group": "shoppingApplication",
+      "subtab": "contactUs",
+      "type": "array",
+      "title": "Companies",
+      "description": "A list of companies and their contact details.",
+      "items":
+      {
+        "type": "object",
+        "properties":
+        {
+
+          "name":
+          {
+            "type": "string",
+            "title": "Company",
+            "description": "The name of the company."
+          },
+          "location":
+          {
+            "type": "string",
+            "title": "Location",
+            "description": "Override the name of the company and use this location instead."
+          },
+          "sitecode":
+          {
+            "type": "string",
+            "title": "Site Code",
+            "description": "Code used to identify the site, e.g. UK, IE, FR..."
+          },
+          "address":
+          {
+            "type": "string",
+            "title": "Address",
+            "description": "The address of the company."
+          },
+          "phone":
+          {
+            "type": "string",
+            "title": "Phone Number",
+            "description": "The phone number of the company."
+          },
+          "email":
+          {
+            "type": "string",
+            "title": "Email",
+            "description": "Contact email address of the company."
+          },
+          "vat":
+          {
+            "type": "string",
+            "title": "VAT Number",
+            "description": "The VAT number of the company."
+          },
+          "facebook":
+          {
+            "type": "string",
+            "title": "Facebook",
+            "description": "Link to the companies Facebook account."
+          },
+          "twitter":
+          {
+            "type": "string",
+            "title": "Facebook",
+            "description": "Link to the companies Twitter account."
+          },
+          "linkedin":
+          {
+            "type": "string",
+            "title": "LinkedIn",
+            "description": "Link to the companies LinkedIn account."
+          },
+          "instagram":
+          {
+            "type": "string",
+            "title": "Instagram",
+            "description": "Link to the companies Instagram account."
+          }
+
+        }
+      },
+      "default": [
+      {
+        "name": "Myla",
+        "address":"87-89 Mortimer St, Fitzrovia, London, W1W 7SW",
+        "phone":"+44 (0)20 7637 2204",
+        "location":"United Kingdom",
+        "email":"info@myla.com",
+        "facebook":"https://www.facebook.com/MylaLondon/",
+        "twitter":"https://twitter.com/MylaLondon",
+        "instagram":"https://www.instagram.com/mylalondon/",
+        "sitecode":"UK"
+      }]
+    }
+  }
+}

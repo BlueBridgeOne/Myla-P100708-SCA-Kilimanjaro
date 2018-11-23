@@ -1,0 +1,22 @@
+{
+	"gulp":
+	{
+		"configuration": [
+			"Configuration/*.json"
+		]
+	},"overrides":
+  {"suitecommerce/SCA@4.0.1/Configuration/Navigation.json":"Configuration/Navigation.json",
+  "suitecommerce/Footer@1.3.0/Configuration/Footer.json":"Configuration/Footer.json",
+  "suitecommerce/Facets@3.2.0/Configuration/Facets.json":"Configuration/Facets.json",
+  "suitecommerce/ProductViews@1.0.2/Configuration/ProductViews.ItemOptions.json":"Configuration/ProductViews.ItemOptions.json",
+  "suitecommerce/Item@1.0.3/Configuration/Item.Options.json":"Configuration/Item.Options.json",
+  "suitecommerce/SspLibraries@4.2.0/Configuration/Translations.json":"Configuration/Translations.json",
+  "suitecommerce/SspLibraries@4.2.0/Configuration/Languages.json":"Configuration/Languages.json",
+  "suitecommerce/SspLibraries@4.2.0/Configuration/SuiteScript.json":"Configuration/SuiteScript.json",
+  "suitecommerce/GoogleUniversalAnalytics@2.3.1/Configuration/GoogleUniversalAnalytics.json":"Configuration/GoogleUniversalAnalytics.json",
+  "suitecommerce/GoogleTagManager@2.0.1/Configuration/GoogleTagManager.json":"Configuration/GoogleTagManager.json",
+  "suitecommerce/ApplicationSkeleton@2.4.1/Configuration/ApplicationSkeleton.Layout.Colors.json":"Configuration/ApplicationSkeleton.Layout.Colors.json",
+  "suitecommerce/SocialSharing@2.0.4/Configuration/facebook.json":"Configuration/facebook.json",
+  "suitecommerce/SocialSharing@2.0.4/Configuration/googlePlus.json":"Configuration/googlePlus.json",
+  "suitecommerce/CheckoutApplication@2.4.0/Configuration/CheckoutApplication.json":"Configuration/CheckoutApplication.json"}
+}

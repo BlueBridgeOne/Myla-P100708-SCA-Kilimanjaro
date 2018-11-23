@@ -1,0 +1,227 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.facets-facet-browse {
+    @extend .container;
+}
+
+.facets-facet-browse-breadcrum {
+    @extend .breadcrumb;
+}
+
+.facets-facet-browse-category {
+    @extend .clearfix;
+}
+
+.facets-facet-browse-facets-filter {
+    float: right;
+    padding-left: $sc-padding-lv3;
+    padding-right: $sc-padding-lv3;
+    text-transform: uppercase;
+    height: $sc-subcat-height;
+    line-height: $sc-subcat-height;
+    position: relative;
+    margin-top: -$sc-subcat-height;
+    text-align: right;
+    display: block;
+    width:auto;
+
+    @media (max-width: $screen-xs-max) {
+        margin-top: 0;
+        float: none;
+    }
+}
+
+.facets-facet-browse-facets-filter-icon {
+    width: 11px;
+    height: 6px;
+    margin-bottom: 2px;
+
+    svg {
+        transform: rotate(0deg);
+        transition: transform 0.2s linear;
+    }
+}
+
+.facets-facet-browse-facets-filter.filter-open {
+    @media (max-width: $screen-xs-max) {
+        background-color: #F8F8F8;
+    }
+}
+
+.facets-faceted-navigation-item-category-facet-group-wrapper.filter-open {
+    background-color: #F8F8F8;
+}
+
+.filter-open {
+    svg {
+        transform: rotate(180deg);
+        transition: transform 0.2s linear;
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+//Facet Browse - Header
+.facets-facet-browse-header {
+    @extend .clearfix;
+    border-bottom: 1px solid $sc-color-theme-border-light;
+    padding: $sc-margin-lv1 0 $sc-margin-lv2;
+}
+
+.facets-facet-browse-title {
+    @extend .list-header-title-ahead;
+
+    @media (min-width: $screen-md-min) {
+        margin-top: $sc-margin-lv1;
+    }
+}
+
+.facets-facet-browse-title-alt {}
+
+.facets-facet-browse-list-header {
+    @extend .list-header;
+}
+
+.facets-facet-browse-list-header-actions {
+    @extend .list-header-actions;
+}
+
+.facets-facet-browse-list-header-expander {
+    @extend .list-header-expander;
+}
+
+.facets-facet-browse-list-header-expander-button {
+    @extend .list-header-expander-button;
+    margin-right: 0;
+}
+
+.facets-facet-browse-list-header-expander-icon {
+    @extend .list-header-expander-icon;
+}
+
+.facets-facet-browse-list-header-filters {
+    @extend .list-header-filters;
+}
+
+.facets-facet-browse-list-header-filters-wrapper {
+    @extend .list-header-filters-wrapper;
+}
+
+.facets-facet-browse-list-header-filters-row {
+    @extend .list-header-filters-row;
+}
+
+.facets-facet-browse-list-header-filter-column {
+    @extend .list-header-filter-column;
+}
+
+.facets-facet-browse-list-header-filter-facets {
+    @extend .list-header-filter-facets;
+    border-radius: 0;
+    padding: $sc-padding-lv2;
+
+    .facets-facet-browse-list-header-filter-facets-icon {
+        @extend .list-header-filter-facets-icon;
+        font-size: 22px;
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+//Facet Browse - Header main content layout
+.facets-facet-browse-content,
+.facets-facet-browse-empty-items {
+    @extend .clearfix;
+}
+
+.facets-facet-browse-facets-sidebar {}
+
+.facets-faceted-navigation-item-cateogry {
+    padding-right: $sc-padding-lv3;
+}
+
+.facets-faceted-navigation-item-cateogry .facets-faceted-navigation-item-facet-group-expander-icon {
+    line-height: 66px + $sc-padding-lv6;
+}
+
+.facets-facet-browse-facets {
+    width: 100%;
+    padding: 0;
+    background-color: #F8F8F8;
+    border-bottom: 1px solid $myla-color-verylightgrey;
+    overflow: hidden;
+    display: none;
+}
+
+.facets-facet-browse-facets[data-pusher="sc-pushable-md"] .sc-pusher-header {
+    margin-left: 0px;
+}
+
+.facets-facet-browse-results {
+    @extend .col-md-12;
+    padding: 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+//Facet Browse - Items
+.facets-facet-browse-items .backbone-collection-view-row {
+    margin-bottom: $sc-margin-lv4; //the margin is only for the first backbone-collection-view-row
+
+    .backbone-collection-view-row {
+        margin-bottom: 0;
+    }
+}
+
+.facets-facet-browse-items .item-view-stock-msg-description {
+    margin-top: 0;
+}
+
+.facets-facet-browse-narrowedby {
+    padding-left: $sc-padding-lv3;
+    padding-right: $sc-padding-lv3;
+    padding-bottom: $sc-padding-lv3;
+    text-transform: uppercase;
+    line-height: 35px;
+}
+
+.facets-facet-browse-items {
+
+    .item-cell-price {
+        margin-bottom: $sc-margin-lv2;
+    }
+
+    .item-cell-image {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+//Facet Browse - Pagination
+.facets-facet-browse-pagination {
+    margin-bottom: $sc-margin-lv8;
+    margin-top: $sc-margin-lv8;
+    text-align: center;
+}
+
+.global-views-pagination {
+    display: inline-block;
+    float: none !important;
+}
+
+.global-views-pagination-count {
+    font-family: $Domaine-font;
+    font-size: 18px;
+    word-spacing: 4px;
+}
+
+.global-views-pagination-next-icon,
+.global-views-pagination-previous-icon {}
+
+.global-views-pagination-active {
+    text-decoration: underline !important;
+    font-size: 1.2em;
+}

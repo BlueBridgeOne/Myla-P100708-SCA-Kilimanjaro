@@ -1,0 +1,490 @@
+$header-height:110px;
+$header-height-mobile:66px;
+
+.big-dark-shadow{
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.24);
+    
+}
+.big-light-shadow{
+    text-shadow: 3px 3px 3px rgba(255, 255, 255, 0.24)!important;
+}
+.dark-shadow{
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.24);
+    
+}
+.light-shadow{
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.24)!important;
+}
+
+.header-foreground {
+    @extend .container-padded;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    height: $header-height;
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (max-width: $screen-md-min) {
+        height: $header-height-mobile;
+    }
+    @media (max-width: $screen-xs-max) {
+        background: white!important;
+        .header-button {
+            color: $myla-color-black!important;
+            fill: $myla-color-black!important;
+        }
+        .header-logo,
+        h3,
+        .product-delivery-note,
+        .product-views-price-lead,
+        .product-views-size-anchor {
+            color: $myla-color-black!important;
+        }
+        select {
+            border-color: $myla-color-black!important;
+            @include angle-down-background($myla-color-black);
+            color: $myla-color-black!important;
+        }
+        .header_product-details-options-selector-option-container {
+            border-top: 1px solid $myla-color-black!important;
+            border-bottom: 1px solid $myla-color-black!important;
+        }
+    }
+}
+
+.header-spacer {
+    height: $header-height;
+    @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+        height: $header-height-mobile;
+    }
+    @media (max-width: $screen-xs-max) {
+        height: 120px;
+    }
+}
+
+.header_product-details-options-selector-option-container {
+    select {
+        border-color: $myla-color-white;
+    }
+}
+
+.header-logo {
+    color: $myla-color-white;
+    padding-top: 18px;
+    font-size: $sc-font-size-xxl;
+    font-weight: normal;
+    margin: 0 auto;
+    text-align: center;
+    display: inline;
+    position: absolute;
+    width: auto;
+    left: 30%;
+    right: 30%;
+    font-family: $Domaine-font;
+    line-height: 1.2;
+    @media (max-width: $screen-sm-max) {
+        padding-top:3px;
+        font-size: $sc-font-size-xl;
+        display: inline!important;
+    }
+    a {
+        color: inherit;
+    }
+}
+
+.header-logo-home {
+    @media (min-width: $screen-md-min) {
+        display:none;
+    }
+}
+
+.header-logo-sub {
+    font-size: $sc-font-size-m;
+    @media (max-width: $screen-sm-max) {
+        font-size: $sc-font-size-s;
+    }
+}
+
+.header-button {
+    height: $header-height;
+    min-width: $header-height;
+    font-size: $sc-font-size-xs;
+    text-transform: uppercase;
+    font-weight: normal;
+    float: right;
+    text-align: center;
+    display: table;
+    overflow: hidden;
+    cursor: pointer;
+    color: $myla-color-white;
+    fill: $myla-color-white;
+    padding: 0 $sc-padding-lv2;
+
+    @media (max-width: $screen-md-min) {
+        height: $header-height-mobile;
+        min-width: auto;
+    }
+}
+
+.header-button img {
+    fill: currentColor;
+}
+
+.header-button>a {
+    display: table-cell;
+    vertical-align: middle;
+    color: inherit;
+    fill: inherit;
+}
+
+.header-button>a:hover {
+    fill: $myla-color-lightgrey;
+    color: $myla-color-lightgrey;
+}
+
+.header-open {
+    .header-foreground {
+        background: $myla-color-white!important;
+    }
+    .header-button>a {
+        color: $myla-color-darkgrey;
+        fill: $myla-color-darkgrey;
+    }
+    .header-logo {
+        color: $myla-color-darkgrey!important;
+        display: inline!important;
+    }
+    .header-button-shop-all {
+        svg {
+            transform: rotate(180deg);
+            transition: transform 0.2s linear;
+        }
+    }
+}
+
+.header-button svg {
+    fill: currentColor;
+}
+
+.header-button-left {
+    float: left;
+}
+
+
+
+
+
+
+
+
+/* Home Banner*/
+
+.BANNER_IMAGE {
+    
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow:hidden;
+
+    div.cms-content {
+        position: relative;
+    }
+}
+
+.BANNER_TEXT {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.BANNER_HOME {
+    h1 {
+        @media (max-width: $screen-sm-max) {
+            display:none;
+        }
+    }
+    h3 {
+        @media (max-width: $screen-sm-max) {
+            display:none;
+        }
+    }
+}
+
+.BANNER-ALIGN {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.BANNER_HOLDER {
+    @extend .container;
+    position: relative;
+    background-color: #DDD;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.BANNER_IMAGE_HOLDER {
+    color: $sc-color-theme-border;
+    display: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.BANNER_TEXT h1 {
+    @extend .big-dark-shadow;
+    color: $myla-color-white;
+    text-align: center;
+    font-size: 35px;
+    font-weight: normal;
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        font-size: 50px;
+    }
+
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        font-size: 65px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        font-size: 80px;
+    }
+}
+
+.BANNER_TEXT h3 {
+    @extend .dark-shadow;
+    color: $myla-color-white;
+    text-align: center;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-top: 1%;
+
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        font-size: 18px;
+    }
+
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        font-size: 19px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        font-size: 20px;
+    }
+}
+
+.BANNER_HOME h3 {
+    @extend .dark-shadow;
+    margin-bottom: 30%;
+    @media (min-width: $screen-md-min) {
+        margin-bottom: 0%;
+    }
+}
+
+.BANNER_CAT,
+.BANNER_PROD {
+    h1 {
+        margin-top: 0;
+        text-transform: uppercase;
+    }
+}
+
+.BANNER_TEXT p {
+    
+    color: $myla-color-white;
+    text-align: center;
+    margin: 1% 10% 0% 10%;
+    font-family: $Domaine-font;
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        margin: 1% 15% 0% 15%;
+    }
+
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        margin: 1% 22% 0% 22%;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        margin: 1% 30% 0% 30%;
+    }
+}
+
+.categories-container {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.category-link {
+    @extend .dark-shadow;
+    color: $myla-color-white;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: $Domaine-font;
+    display: block;
+    margin: 7% 0;
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        font-size: 28px;
+        margin: 6% 0;
+    }
+
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        font-size: 19px;
+        display: inline-block;
+        margin: 0;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        font-size: 20px;
+        display: inline-block;
+        margin: 0;
+    }
+}
+
+.category-bar {
+    margin-left: 2%;
+    margin-right: 2%;
+    color: $myla-color-mediumgrey;
+    display: none;
+    @media (min-width: $screen-md-min) {
+        display:inline;
+    }
+}
+
+.header-icon-search {
+    @extend .fa;
+    @extend %fa-search;
+}
+
+.header-button-menu {
+    @media (min-width: $screen-sm-min) {
+        display:none;
+    }
+}
+
+.header-button-shop-all,.header-button-search,.header-button-my-account {
+    @media (max-width: $screen-xs-max) {
+        display:none;
+    }
+}
+
+.header-button-shop-all {
+    svg {
+        transform: rotate(0deg);
+        transition: transform 0.2s linear;
+    }
+}
+
+
+.header-foreground-dark {
+    .header-button {
+        color: $myla-color-black!important;
+        fill: $myla-color-black!important;
+    }
+    
+
+    h1,
+   {
+       @extend .big-light-shadow;
+        color: $myla-color-black!important;
+    }
+    h3,
+    {
+        @extend .light-shadow;
+         color: $myla-color-black!important;
+     }
+    .header-logo,
+    .product-delivery-note,
+    .product-views-price-lead,
+    .product-views-size-anchor {
+        color: $myla-color-black!important;
+    }
+    select {
+        border-color: $myla-color-black!important;
+        @include angle-down-background($myla-color-black);
+        @include angle-down-background($myla-color-black);
+        color: $myla-color-black!important;
+    }
+    .header_product-details-options-selector-option-container {
+        border-top: 1px solid $myla-color-black!important;
+        border-bottom: 1px solid $myla-color-black!important;
+    }
+    a.category-link{
+        @extend .light-shadow;
+    color: $myla-color-black!important;
+
+    }
+    a.category-link:hover{
+    color: $myla-color-mediumgrey!important;
+    }
+    select.product-views-option-dropdown-select{
+        background-color:rgba(255,255,255,.25)!important;
+    }
+}
+
+.show-product-details-header {
+    @media (max-width: $screen-xs-max) {
+        display:none;
+    }
+}
+
+.show-product-details-subheader {
+    display: none;
+    @media (max-width: $screen-xs-max) {
+        display:block;
+    }
+}
+
+.header-dropdown {
+    position: static;
+    top: $header-height;
+    width: 100%;
+
+    @extend .container-padded;
+    z-index: 20;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (max-width: $screen-md-min) {
+        top: $header-height-mobile;
+    }
+    @media (max-width: $screen-xs-max) {
+        padding-left: 0;
+        padding-right: 0;
+        border-bottom: 1px solid $myla-color-verylightgrey;
+    }
+    display:none;
+    background-color:$myla-color-white;
+}
+
+.header-banner {
+    min-height:300px;
+    width:100%;
+    @media (max-width: $screen-xs-max) {
+        margin-top:120px;
+    }
+    div.bgimage-anc-child-0{
+        background-size: 1400px auto;
+    }
+    @media (max-width: $screen-sm-max) {
+        div.bgimage-anc-child-0{
+        background-size: 1150px auto;
+        }
+    }
+    @media (max-width: $screen-xs-max) {
+        div.bgimage-anc-child-0{
+        background-size: 900px auto;
+        }
+    }
+    
+    
+}

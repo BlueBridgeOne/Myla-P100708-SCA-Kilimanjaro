@@ -1,3 +1,5 @@
 node_modules/
 DeployDistribution/
 LocalDistribution/
+.DS_Store
+default.sublime-project

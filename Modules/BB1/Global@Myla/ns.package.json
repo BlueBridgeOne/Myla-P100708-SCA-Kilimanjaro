@@ -1,0 +1,62 @@
+{
+    "gulp":
+    {
+        "javascript": [
+            "JavaScript/*"
+        ],
+        "images": [
+            "Images/*"
+        ],
+        "templates": [
+            "Templates/*"
+        ],
+        "sass": [
+            "Sass/**/*.scss"
+        ],
+        "ssp-libraries": [
+            "SuiteScript/*.js"
+        ],
+        "configuration": [
+            "Configuration/*.json"
+        ]
+    },
+    "overrides":
+    {
+        "suitecommerce/ApplicationSkeleton@2.4.1/JavaScript/ApplicationSkeleton.Layout.js": "JavaScript/ApplicationSkeleton.Layout.js",
+        "suitecommerce/ErrorManagement@2.4.2/Templates/error_management_expired_link.tpl": "Templates/error_management_expired_link.tpl",
+        "suitecommerce/ErrorManagement@2.4.2/Templates/error_management_forbidden_error.tpl": "Templates/error_management_forbidden_error.tpl",
+        "suitecommerce/ErrorManagement@2.4.2/Templates/error_management_generic_logout.tpl": "Templates/error_management_generic_logout.tpl",
+        "suitecommerce/ErrorManagement@2.4.2/Templates/error_management_internal_error.tpl": "Templates/error_management_internal_error.tpl",
+        "suitecommerce/ErrorManagement@2.4.2/Templates/error_management_logged_out.tpl": "Templates/error_management_logged_out.tpl",
+        "suitecommerce/ErrorManagement@2.4.2/Templates/error_management_page_not_found.tpl": "Templates/error_management_page_not_found.tpl",
+        "suitecommerce/Transaction.Line.Views@1.2.1/Templates/transaction_line_views_selected_option.tpl": "Templates/transaction_line_views_selected_option.tpl",
+        "suitecommerce/Transaction.Line.Views@1.2.1/Templates/transaction_line_views_price.tpl": "Templates/transaction_line_views_price.tpl",
+        "suitecommerce/ErrorManagement@2.4.2/JavaScript/ErrorManagement.View.js": "JavaScript/ErrorManagement.View.js",
+        "suitecommerce/ErrorManagement@2.4.2/JavaScript/ErrorManagement.js": "JavaScript/ErrorManagement.js",
+        "suitecommerce/ErrorManagement@2.4.2/Sass/_error-management-page-not-found.scss": "Sass/_error-management-page-not-found.scss",
+        "suitecommerce/LiveOrder@4.1.0/JavaScript/LiveOrder.Model.js": "JavaScript/LiveOrder.Model.js",
+        "suitecommerce/Item@1.0.3/JavaScript/Item.Model.js": "JavaScript/Item.Model.js",
+        "suitecommerce/Item@1.0.3/JavaScript/Item.KeyMapping.js": "JavaScript/Item.KeyMapping.js",
+        "suitecommerce/ItemRelations@3.0.2/Templates/item_relations_related_item.tpl": "Templates/item_relations_related_item.tpl",
+        "suitecommerce/ItemRelations@3.0.2/Templates/item_relations_row.tpl": "Templates/item_relations_row.tpl",
+        "suitecommerce/ItemRelations@3.0.2/Sass/_item-relations-related-item.scss": "Sass/_item-relations-related-item.scss",
+        "suitecommerce/GlobalViews@1.4.1/Sass/_global-views-modal.scss": "Sass/_global-views-modal.scss",
+        "suitecommerce/ItemRelations@3.0.2/JavaScript/ItemRelations.RelatedItem.View.js": "JavaScript/ItemRelations.RelatedItem.View.js",
+        "suitecommerce/GlobalViews@1.4.1/JavaScript/GlobalViews.Pagination.View.js": "JavaScript/GlobalViews.Pagination.View.js",
+        "suitecommerce/GlobalViews@1.4.1/JavaScript/GlobalViews.Message.View.js": "JavaScript/GlobalViews.Message.View.js",
+        "suitecommerce/Session@2.2.4/JavaScript/Session.js": "JavaScript/Session.js",
+        "suitecommerce/SspLibraries@4.2.0/SuiteScript/Application.js": "SuiteScript/Application.js",
+        "suitecommerce/GlobalImages@1.0.2/Images/no_image_available.jpeg": "Images/no_image_available.jpeg",
+        "suitecommerce/GlobalImages@1.0.2/Images/favicon.ico": "Images/favicon.ico",
+        "suitecommerce/LiveOrder@4.1.0/SuiteScript/LiveOrder.Model.js": "SuiteScript/LiveOrder.Model.js",
+        "suitecommerce/RecentlyViewedItems@2.4.1/Templates/recently_viewed_cell.tpl": "Templates/recently_viewed_cell.tpl",
+        "suitecommerce/RecentlyViewedItems@2.4.1/Templates/recently_viewed_row.tpl": "Templates/recently_viewed_row.tpl",
+        "suitecommerce/Transaction.Line.Views@1.2.1/JavaScript/Transaction.Line.Views.Price.View.js": "JavaScript/Transaction.Line.Views.Price.View.js",
+        "suitecommerce/Transaction.Line.Views@1.2.1/JavaScript/Transaction.Line.Views.Cell.Navigable.View.js": "JavaScript/Transaction.Line.Views.Cell.Navigable.View.js",
+        "suitecommerce/NavigationHelper@2.1.1/JavaScript/NavigationHelper.Plugins.DataTouchPoint.js": "JavaScript/NavigationHelper.Plugins.DataTouchPoint.js",
+        "suitecommerce/BackboneExtras@2.4.3/JavaScript/Backbone.Validation.callbacks.js": "JavaScript/Backbone.Validation.callbacks.js",
+        "suitecommerce/jQuery.Deferred@1.0.0/jQuery.Deferred.js": "JavaScript/jQuery.Deferred.js",
+        "suitecommerce/BackboneExtras@2.4.3/JavaScript/Backbone.Sync.js": "JavaScript/Backbone.Sync.js",
+        "suitecommerce/GoogleTagManager@2.0.1/JavaScript/GoogleTagManager.js":"JavaScript/GoogleTagManager.js"
+    }
+}

@@ -1,0 +1,269 @@
+/*
+    © 2017 NetSuite Inc.
+    User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+    provided, however, if you are an authorized user with a NetSuite account or log-in, you
+    may use this code subject to the terms that govern your access and use.
+*/
+
+footer {
+    @extend .container;
+    background: $myla-color-darkgrey;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 50%;
+    z-index: -1;
+    border-right: 1px solid white;
+    transform: translateX(-50%);
+    margin-top: $grid-gutter-width;
+    padding-bottom: 0;
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        margin-top: $grid-gutter-width-sm;
+        padding-bottom: 5%;
+    }
+
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        margin-top: $grid-gutter-width-md;
+        padding-bottom: 5%;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        margin-top: $grid-gutter-width-lg;
+        padding-bottom: 5%;
+    }
+}
+
+.footer-content {}
+
+.footer-content-nav-list {
+    list-style: none;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.footer-content-nav-list>li {
+    display: inline-block;
+
+    @media (max-width: $screen-xs-max) {
+        display:block;
+        border-bottom: 1px solid $myla-color-mediumgrey;
+
+        text-align: left;
+    }
+}
+
+.footer-logo {
+    width: 28px;
+    height: 28px;
+    margin-top: 2%;
+}
+
+.FOOTER_TEXT {
+    margin-top: 1%;
+    text-align: center;
+    display: none;
+    @media (min-width: $screen-sm-min) {
+        display:block;
+    }
+}
+
+.FOOTER_TEXT_BOTTOM {
+    text-align: center;
+    display: none;
+    margin-top: 5%;
+    @media (max-width: $screen-xs-max) {
+        display:block;
+    }
+}
+
+.FOOTER_TEXT h2,
+.FOOTER_TEXT_BOTTOM h2 {
+    color: $myla-color-white;
+    text-align: center;
+    font-size: 26px;
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        font-size: 34px;
+    }
+
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        font-size: 42px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        font-size: 50px;
+    }
+}
+
+.FOOTER_TEXT h4,
+.FOOTER_TEXT_BOTTOM h4 {
+    color: $myla-color-white;
+    text-align: center;
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-top: 0.6%;
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        font-size: 11px;
+    }
+
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        font-size: 12px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        font-size: 13px;
+    }
+}
+
+.footer-currency-link {
+    color: $myla-color-white;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    white-space: nowrap;
+    display: block;
+    padding: $sc-margin-lv3;
+}
+
+.footer-link {
+    color: $myla-color-white;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    white-space: nowrap;
+    display: block;
+    padding: $sc-margin-lv3;
+    text-align: left;
+
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        font-size: 12px;
+        margin: 0 $sc-margin-lv2;
+        text-align: inherit;
+        padding: 0;
+    }
+
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        font-size: 13px;
+        margin: 0 $sc-margin-lv3;
+        text-align: inherit;
+        padding: 0;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        font-size: 13px;
+        margin: 0 $sc-margin-lv4;
+        text-align: inherit;
+        padding: 0;
+    }
+}
+
+.currency-dropdown {
+    color: $myla-color-white;
+}
+
+.currency-dropdown:hover {
+    color: $myla-color-lightgrey;
+}
+
+.open>[data-toggle="dropdown"] {
+    color: $myla-color-lightgrey;
+}
+
+
+/* Categories */
+
+$sc-footer-category-width:308px;
+.footer-categories-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    text-align: center;
+}
+
+.footer-categories-subtitle {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.footer-categories-title {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.footer-categories-img {
+    img{
+    border: 3px solid $myla-color-darkgrey;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    width: 100%;
+    @media (max-width: $screen-sm-max) {
+        border: 2px solid $myla-color-darkgrey;
+    
+    }
+}
+}
+
+.footer-categories-list {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    display: inline-block;
+    width: auto;
+    white-space: nowrap;
+    li {
+        display: inline-block;
+        width: $sc-footer-category-width;
+        @include variable-gutter("padding-right", 1);
+        @include variable-gutter("padding-left", 1);
+
+        @media (max-width: $screen-sm-max) {
+            width:$sc-footer-category-width*.75;
+            @include variable-gutter("padding-right", .75);
+        @include variable-gutter("padding-left", .75);
+        }
+
+        @media (max-width: $screen-xs-max) {
+            width:$sc-footer-category-width*.5;
+            @include variable-gutter("padding-right", .5);
+        @include variable-gutter("padding-left", .5);
+        }
+    }
+}
+
+.footer-categories-collection {
+    text-align: center;
+    white-space:normal;
+}
+
+.footer-categories {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.footer-currency-list-holder {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y:none;
+    text-align: center;
+    background-color: black;
+    border-bottom: 1px solid $myla-color-mediumgrey;
+    display: none;
+    white-space: nowrap;
+
+    @media (min-width: $screen-sm-min) {
+        margin-top:$sc-margin-lv2;
+        border-top: 1px solid $myla-color-mediumgrey;
+    }
+}
+
+.footer-currency-list {
+    display: inline-block;
+    width:auto;
+    li {
+        display: inline-block;
+        padding: $sc-padding-lv1 $sc-padding-lv2;
+    }
+}

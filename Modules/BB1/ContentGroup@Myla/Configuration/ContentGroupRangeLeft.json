@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "subtab": {
+    "id": "contentGroupsRangeLeft",
+    "title": "Range Left",
+    "group": "contentGroupsTab"
+  },
+  "properties": {
+    "contentGroups.rangeleft": {
+      "group": "contentGroupsTab",
+      "subtab": "contentGroupsRangeLeft",
+      "type": "array",
+      "title": "Range Left",
+      "description": "A list of all the groups used in a range category.",
+      "items": {
+        "type": "object",
+        "properties": {
+
+          "groupTemplate": {
+            "type": "string",
+            "title": "Group",
+            "source": "$resource.fields.groupTemplates"
+          }
+
+        }
+      },
+      "default": [{
+          "groupTemplate": "PRODUCT CELL x5 LEFT"
+        },
+        {
+          "groupTemplate": "PRODUCT CELL x5 RIGHT"
+        }
+      ]
+    }
+  }
+}

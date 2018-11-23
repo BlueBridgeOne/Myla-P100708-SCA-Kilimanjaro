@@ -3,3 +3,4 @@ DeployDistribution/
 LocalDistribution/
 .DS_Store
 default.sublime-project
+.vscode

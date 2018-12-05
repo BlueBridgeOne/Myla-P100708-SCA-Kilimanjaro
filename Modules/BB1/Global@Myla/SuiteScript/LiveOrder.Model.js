@@ -1446,7 +1446,7 @@ define(
 				// @param {LiveOrder.Model.Data} data
 				,
 			setPurchaseNumber: function setPurchaseNumber(data) {
-					nlapiLogExecution("ERROR", "User = " + nlapiGetUser() + " Role = " + nlapiGetRole() + " logged in= " + ModelsInit.session.isLoggedIn2());
+					//nlapiLogExecution("ERROR", "User = " + nlapiGetUser() + " Role = " + nlapiGetRole() + " logged in= " + ModelsInit.session.isLoggedIn2());
 
 					if (ModelsInit.session.isLoggedIn2()) {
 						if (data && data.purchasenumber) {
@@ -1661,7 +1661,7 @@ define(
 				,
 			process3DSecure: function process3DSecure() {
 				var orderHandlerUrl = ModelsInit.session.getAbsoluteUrl('checkout', '../threedsecure.ssp');
-				nlapiLogExecution('DEBUG', '3D Secure', 'Submit 3D Secure ' + orderHandlerUrl);
+				nlapiLogExecution('DEBUG', '3D Secure Live Order', 'Submit 3D Secure ' + orderHandlerUrl);
 				var confirmation = ModelsInit.order.submit({
 					paymentauthorization: {
 						type: 'threedsecure',
@@ -1669,7 +1669,7 @@ define(
 						termurl: orderHandlerUrl
 					}
 				});
-				nlapiLogExecution('DEBUG', '3D Secure', '3D Secure confirmation=' + JSON.stringify(confirmation));
+				nlapiLogExecution('DEBUG', '3D Secure Live Order', '3D Secure confirmation=' + JSON.stringify(confirmation));
 				if (confirmation.statuscode === 'error') {
 					// With 3D Secure, we expect the order.submit() operation returning
 					// 'ERR_WS_REQ_PAYMENT_AUTHORIZATION' to continue the flow.

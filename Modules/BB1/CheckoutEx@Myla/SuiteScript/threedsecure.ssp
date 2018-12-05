@@ -12,26 +12,27 @@
 	LiveOrderModel = require('LiveOrder.Model');
 
 	try {
-nlapiLogExecution("DEBUG","3D Secure","submit");
+nlapiLogExecution("DEBUG","3D Secure.ssp","submit");
 		// Submit the order
 		confirmation = LiveOrderModel.submit(true);
-		nlapiLogExecution("DEBUG","3D Secure","confirmation="+JSON.stringify(confirmation));
+		nlapiLogExecution("DEBUG","3D Secure.ssp","confirmation="+JSON.stringify(confirmation));
 		// Get the new order
 		order_info = LiveOrderModel.get();
-		nlapiLogExecution("DEBUG","3D Secure","order_info="+JSON.stringify(order_info));
+		nlapiLogExecution("DEBUG","3D Secure.ssp","order_info="+JSON.stringify(order_info));
 		// Set the confirmation
 		order_info.confirmation = confirmation;
 
 	}
 	catch(e)
 	{
-		nlapiLogExecution("DEBUG","3D Secure","error="+e);
+		nlapiLogExecution("DEBUG","3D Secure.ssp","error="+e);
 		order_info = {};
 		confirmation = Application.processError(e);
-		nlapiLogExecution("DEBUG","3D Secure","error confirmation="+JSON.stringify(confirmation));
+		order_info.confirmation = confirmation;
+		nlapiLogExecution("DEBUG","3D Secure.ssp","error confirmation="+JSON.stringify(confirmation));
 	}
 
-	order_info.confirmation = confirmation;
+	
 
 %>
 <!DOCTYPE html>

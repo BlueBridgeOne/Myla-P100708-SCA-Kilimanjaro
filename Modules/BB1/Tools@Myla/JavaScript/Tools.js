@@ -9,6 +9,10 @@ define('Tools', [
 
         'use strict';
 
+        // SC.isPageGenerator=function(){
+        //     return true;
+        // }
+
         Handlebars.registerHelper("debug", function (optionalValue) {
             console.log("Current Context");
             console.log("====================");

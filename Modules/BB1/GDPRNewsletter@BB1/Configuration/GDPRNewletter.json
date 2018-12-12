@@ -33,7 +33,7 @@
       "subtab": "gdprnewsletter",
       "type": "string",
       "title": "Notify E-Mail Address",
-      "default": "info@myla.com"
+      "default": "customer.services@myla.com"
     }
   }
 }

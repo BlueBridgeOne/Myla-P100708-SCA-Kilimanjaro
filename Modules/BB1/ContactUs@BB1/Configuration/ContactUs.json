@@ -34,7 +34,7 @@
       "subtab": "contactUs",
       "type": "string",
       "title": "Notify E-Mail Address",
-      "default": "info@myla.com"
+      "default": "customer.services@myla.com"
     },
     "contactUs.spam":
     {
@@ -149,9 +149,9 @@
       {
         "name": "Myla",
         "address":"87-89 Mortimer St, Fitzrovia, London, W1W 7SW",
-        "phone":"+44 (0)20 7637 2204",
+        "phone":"+44 (0)203 883 5645",
         "location":"United Kingdom",
-        "email":"info@myla.com",
+        "email":"customer.services@myla.com",
         "facebook":"https://www.facebook.com/MylaLondon/",
         "twitter":"https://twitter.com/MylaLondon",
         "instagram":"https://www.instagram.com/mylalondon/",

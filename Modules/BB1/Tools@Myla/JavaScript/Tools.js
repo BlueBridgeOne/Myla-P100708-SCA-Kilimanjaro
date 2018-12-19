@@ -9,6 +9,10 @@ define('Tools', [
 
         'use strict';
 
+        // SC.isPageGenerator=function(){
+        //     return true;
+        // }
+
         Handlebars.registerHelper("debug", function (optionalValue) {
             console.log("Current Context");
             console.log("====================");
@@ -634,7 +638,7 @@ getRRP:function(item){ // Get the item RRP price for the current currency
                         if (ssp > -1) {
                             baseUrl = document.location.href.substring(0, ssp + 4) + "?";
                         }
-                        baseUrl = SC.SESSION.touchpoints.logout;
+                        baseUrl = SC.SESSION&&SC.SESSION.touchpoints&&SC.SESSION.touchpoints.logout;
                         var newHref = Utils.addParamsToUrl(baseUrl, {
                             cur: currencies[i].code
                         });

@@ -239,10 +239,9 @@ define('Wizard.Step'
 			
 			if (this.error)
 			{
-				console.trace();
 				console.log("Step Error");
 				console.log(this.error);
-				var paymentmessage="<br /><br /><ol style='list-style:decimal;margin-left:15px;color:#4d5256;font-size:.9em;'><li style='list-style:decimal;'>Check the payment and address details have been entered correctly.</li><li style='list-style:decimal;'>Check the account has sufficient funds.</li><li style='list-style:decimal;'>Try a different card.</li><li style='list-style:decimal;'>Call us for assistance <a href='tel:+44 (0)20 7637 2204'>+44 (0)20 7637 2204</a>.</li></ol>";
+				var paymentmessage="<br /><br /><ol style='list-style:decimal;margin-left:15px;color:#4d5256;font-size:.9em;'><li style='list-style:decimal;'>Check the payment and address details have been entered correctly.</li><li style='list-style:decimal;'>Check the account has sufficient funds.</li><li style='list-style:decimal;'>Try a different card.</li><li style='list-style:decimal;'>Call us for assistance <a href='tel:+44 (0)203 883 5645'>+44 (0)203 883 5645</a>.</li></ol>";
 				var message=this.error.errorMessage;
 				if(message=="Payment Gateway rejected the request."||message=="There was an unexpected error that occurred while communicating with the payment processor. Please try again later."){
 					message="We were unable to process this payment."+paymentmessage;

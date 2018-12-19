@@ -97,7 +97,7 @@ define(
 					currencies: currencies,
 					selected_currency: selected,
 					showCurrencies: showCurrencies,
-					logout:SC.SESSION.touchpoints.logout
+					logout:SC.SESSION&&SC.SESSION.touchpoints&&SC.SESSION.touchpoints.logout
 				};
 				// @class Footer.View
 			}

@@ -684,3 +684,4 @@ define('Wizard.Step'
 		}
 	});
 });
+

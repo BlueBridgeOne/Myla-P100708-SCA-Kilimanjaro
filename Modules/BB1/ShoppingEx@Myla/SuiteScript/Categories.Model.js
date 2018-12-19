@@ -503,8 +503,10 @@ define(
 				]
 			,	searchColumns = [
 					new nlobjSearchColumn('fullurl')
-					,new nlobjSearchColumn('thumbnail')
+				,	new nlobjSearchColumn('thumbnail')
 				,	new nlobjSearchColumn('nestlevel')
+				,	new nlobjSearchColumn('custrecord_bb1_mya_status')
+				,	new nlobjSearchColumn('custrecord_bb1_mya_hide_from_menu')
 				,	new nlobjSearchColumn('idpath').setSort(false)
 				]
 			,	bag = {}
@@ -536,6 +538,8 @@ define(
 
 					current.fullurl = line.getValue('fullurl');
 					current.thumbnail = line.getText('thumbnail');
+					current.status = line.getValue('custrecord_bb1_mya_status');
+					current.hide = line.getValue('custrecord_bb1_mya_hide_from_menu');
 					current.level = line.getValue('nestlevel');
 
 					var parentIdPathArr = idPath.split('|');

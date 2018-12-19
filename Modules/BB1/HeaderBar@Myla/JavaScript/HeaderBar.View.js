@@ -16,6 +16,7 @@ define(
                 var self = this;
                 this.dark = SC.Tools.dark;
                 this.home = SC.Tools.home;
+                var $html = $("html");
                 var SMT = $html.hasClass("ns_is-admin") || $html.hasClass("ns_is-edit");
                 if (!SMT) {
                     SC.Tools.onUpdateHeader("bar", function () {

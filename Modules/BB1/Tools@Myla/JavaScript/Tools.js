@@ -101,13 +101,11 @@ define('Tools', [
                     if (!SMT) {
 
                         //console.log("updateDarkHeader dark=" + dark + " home=" + this.home + " to " + this._onUpdateHeader);
-                        var $html = $("html");
-                        var SMT = $html.hasClass("ns_is-admin") || $html.hasClass("ns_is-edit");
-                        if (!SMT) {
+                        
                             for (var f in this._onUpdateHeader) {
                                 this._onUpdateHeader[f]();
                             }
-                        }
+                        
                     }
                 }
 

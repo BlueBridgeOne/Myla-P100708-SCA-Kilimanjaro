@@ -16,11 +16,14 @@ define(
                 var self = this;
                 this.dark = SC.Tools.dark;
                 this.home = SC.Tools.home;
-                SC.Tools.onUpdateHeader("bar", function () {
-                    self.dark = SC.Tools.dark;
-                    self.home = SC.Tools.home;
-                    self.render();
-                });
+                var SMT = $html.hasClass("ns_is-admin") || $html.hasClass("ns_is-edit");
+                if (!SMT) {
+                    SC.Tools.onUpdateHeader("bar", function () {
+                        self.dark = SC.Tools.dark;
+                        self.home = SC.Tools.home;
+                        self.render();
+                    });
+                }
             },
             events: {
                 'click [data-action="show-menu"]': 'showMenu',

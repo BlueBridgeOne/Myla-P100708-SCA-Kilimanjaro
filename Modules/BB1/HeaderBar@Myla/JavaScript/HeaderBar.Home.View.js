@@ -24,11 +24,14 @@ define(
                 }
                 this.dark = darkText || SC.Tools.dark;
                 this.home = SC.Tools.home;
+                var SMT = $html.hasClass("ns_is-admin") || $html.hasClass("ns_is-edit");
+                    if (!SMT) {
                 SC.Tools.onUpdateHeader("home", function() {
                     self.dark = SC.Tools.dark;
                     self.home = SC.Tools.home;
                     self.render();
                 });
+            }
 
                 if (this.options.template) {
                     switch (this.options.template) {

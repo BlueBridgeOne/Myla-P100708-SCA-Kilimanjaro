@@ -712,3 +712,4 @@ getRRP:function(item){ // Get the item RRP price for the current currency
 
         return Tools;
     });
+    

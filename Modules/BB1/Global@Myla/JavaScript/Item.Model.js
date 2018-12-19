@@ -273,11 +273,11 @@ define('Item.Model'
 			// @param {Boolean} dont_cache if true it won't return the cached attribute value.
 		,	get: function get (attr, dont_cache)
 			{
-				if(attr=="custitem_bb1_gbp_rrp"){
-					if(this.attributes["custitem_bb1_gbp_rrp"]){
-						console.log(this.attributes["custitem_bb1_gbp_rrp"]); 
-					}
-				}
+				// if(attr=="custitem_bb1_gbp_rrp"){
+				// 	if(this.attributes["custitem_bb1_gbp_rrp"]){
+				// 		console.log(this.attributes["custitem_bb1_gbp_rrp"]); 
+				// 	}
+				// }
 				var keyMapping = this.getKeyMapping();
 
 				// var keyMapping = this.keyMapping || (this.collection && this.collection.keyMapping); // TODO: Dev Tools migration concern...

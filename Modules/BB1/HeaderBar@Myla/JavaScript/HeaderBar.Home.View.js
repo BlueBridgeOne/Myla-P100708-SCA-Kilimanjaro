@@ -24,6 +24,7 @@ define(
                 }
                 this.dark = darkText || SC.Tools.dark;
                 this.home = SC.Tools.home;
+                var $html = $("html");
                 var SMT = $html.hasClass("ns_is-admin") || $html.hasClass("ns_is-edit");
                     if (!SMT) {
                 SC.Tools.onUpdateHeader("home", function() {

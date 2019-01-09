@@ -86,7 +86,7 @@ define(
 				var showCurrencies = !SC.ENVIRONMENT.fixedCurrency;
 				
 				console.log("Currency is fixed " + !showCurrencies);
-				
+				//
 				// @class Footer.View.Context
 				return {
 					// @property {Boolean} showLanguages

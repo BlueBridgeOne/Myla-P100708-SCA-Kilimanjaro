@@ -162,7 +162,8 @@
 					"paletteId": "default",
 					"colorName": "Silver",
 					"colorValue": "#999",
-					"isLightColor":true
+					"isLightColor":true,
+					"imgsrc":"/images/swatches/Silver Swatch.jpg"
 				}
 				,{
 					"paletteId": "default",

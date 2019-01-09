@@ -30,6 +30,7 @@
   "suitecommerce/Facets@3.2.0/JavaScript/Facets.Translator.js": "JavaScript/Facets.Translator.js",
   "suitecommerce/Facets@3.2.0/JavaScript/Facets.Browse.View.js": "JavaScript/Facets.Browse.View.js",
   "suitecommerce/Facets@3.2.0/JavaScript/Facets.ItemCell.View.js": "JavaScript/Facets.ItemCell.View.js",
+  "suitecommerce/Facets@3.2.0/JavaScript/Facets.Model.js": "JavaScript/Facets.Model.js",
   "suitecommerce/Facets@3.2.0/JavaScript/Facets.FacetedNavigationItem.View.js": "JavaScript/Facets.FacetedNavigationItem.View.js",
   "suitecommerce/Facets@3.2.0/JavaScript/Facets.FacetedNavigationItemCategory.View.js": "JavaScript/Facets.FacetedNavigationItemCategory.View.js",
   "suitecommerce/Facets@3.2.0/Sass/_facets-facet-browse.scss": "Sass/_facets-facet-browse.scss",
@@ -45,6 +46,7 @@
   "suitecommerce/Facets@3.2.0/Templates/facets_faceted_navigation_item.tpl": "Templates/facets_faceted_navigation_item.tpl",
   "suitecommerce/Facets@3.2.0/Templates/facets_faceted_navigation.tpl": "Templates/facets_faceted_navigation.tpl",
   "suitecommerce/Categories@3.0.4/SuiteScript/Categories.Model.js": "SuiteScript/Categories.Model.js",
+  "suitecommerce/Categories@3.0.4/JavaScript/Categories.js": "JavaScript/Categories.js",
   "suitecommerce/ProductDetails@1.0.3/JavaScript/ProductDetails.Full.View.js": "JavaScript/ProductDetails.Full.View.js",
   "suitecommerce/ProductDetails@1.0.3/JavaScript/ProductDetails.Base.View.js": "JavaScript/ProductDetails.Base.View.js",
   "suitecommerce/ProductDetails@1.0.3/JavaScript/ProductDetails.QuickView.View.js": "JavaScript/ProductDetails.QuickView.View.js",
@@ -71,5 +73,5 @@
   "suitecommerce/CMSadapter@4.0.0/Sass/_cms-landing-page.scss": "Sass/_cms-landing-page.scss",
   "suitecommerce/SocialSharing@2.0.4/Sass/_social-sharing-flyout.scss": "Sass/_social-sharing-flyout.scss",
   "suitecommerce/CMSadapter@4.0.0/JavaScript/CMSadapter.Component.js": "JavaScript/CMSadapter.Component.js"}
-  
+
 }

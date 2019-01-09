@@ -5,7 +5,7 @@ define(
 
         , 'Utils', 'jQuery'
     ],
-    function(
+    function (
         Configuration, View, BackboneCompositeView, headerbar_home_tpl, headerbar_mini_tpl, headerbar_cat_tpl, headerbar_prod_tpl, ProductDetailsHeaderView, ProductDetailsSubHeaderView
 
         , Utils, jQuery
@@ -14,7 +14,7 @@ define(
 
         return Backbone.View.extend({
 
-            initialize: function(options) {
+            initialize: function (options) {
                 this.options = options || {};
 
                 var self = this;
@@ -26,88 +26,108 @@ define(
                 this.home = SC.Tools.home;
                 var $html = $("html");
                 var SMT = $html.hasClass("ns_is-admin") || $html.hasClass("ns_is-edit");
-                    if (!SMT) {
-                SC.Tools.onUpdateHeader("home", function() {
-                    self.dark = SC.Tools.dark;
-                    self.home = SC.Tools.home;
-                    self.render();
-                });
-            }
+                if (!SMT) {
+                    SC.Tools.onUpdateHeader("home", function () {
+                        self.dark = SC.Tools.dark;
+                        self.home = SC.Tools.home;
+                        self.render();
+                    });
+                }
 
                 if (this.options.template) {
                     switch (this.options.template) {
                         case "mini":
                             this.template = headerbar_mini_tpl;
-                            SC.Tools.updateDarkHeader(true);
+                            if (!SMT) {
+                                SC.Tools.updateDarkHeader(true);
+                            }
                             break;
                         case "category":
                         case "search":
                             this.template = headerbar_cat_tpl;
-                            SC.Tools.updateDarkHeader(darkText);
+                            if (!SMT) {
+                                SC.Tools.updateDarkHeader(darkText);
+                            }
                             break;
                         case "product":
                             this.template = headerbar_prod_tpl;
-                            SC.Tools.updateDarkHeader(darkText);
+                            if (!SMT) {
+                                SC.Tools.updateDarkHeader(darkText);
+                            }
                             break;
                         default:
-                            SC.Tools.updateDarkHeader(darkText || false);
+                            if (!SMT) {
+                                SC.Tools.updateDarkHeader(darkText || false);
+                            }
                             break;
                     }
-                } else {
+                } else if (!SMT) {
                     SC.Tools.updateDarkHeader(darkText || false);
                 }
                 BackboneCompositeView.add(this);
             },
-            updateImage: function(newImage) {
-            //console.log("Update Banner "+newImage.url);
-                var darkText;
-                this.options.image = newImage;
-                if (this.options.image && this.options.image.lit) {
-                    darkText = true;
+            updateImage: function (newImage) {
+                //console.log("Update Banner "+newImage.url);
+                var $html = $("html");
+                var SMT = $html.hasClass("ns_is-admin") || $html.hasClass("ns_is-edit");
+                if (!SMT) {
+                    var darkText;
+                    this.options.image = newImage;
+                    if (this.options.image && this.options.image.lit) {
+                        darkText = true;
+                    }
+                    if (darkText != this.dark) {
+                        this.dark = darkText;
+
+                        SC.Tools.updateDarkHeader(darkText);
+                    }
+                    this.render();
                 }
-                if(darkText!=this.dark){
-                this.dark=darkText;
-                SC.Tools.updateDarkHeader(darkText);
-                }
-                this.render();
             },
-            render: function() {
+            render: function () {
 
 
                 Backbone.View.prototype.render.call(this);
 
                 //sort fixed heights.
                 var vph = $(window).height();
-                
+
                 this.$el.find("[data-height]").each(function () {
                     var $this = $(this);
                     var dheight = $this.attr("data-height");
                     var dwidth = $(document).width();
                     if (dwidth < 500) {
                         vph *= .65;
-                    }else if (dwidth < 800) {
+                    } else if (dwidth < 800) {
                         vph *= .75;
                     }
                     var newHeight = (parseInt(dheight) / 100) * vph;
-                    if(newHeight>1400*.5){
-                        newHeight=1400*.5;
+                    if (newHeight > 1400 * .5) {
+                        newHeight = 1400 * .5;
                     }
                     $this.height(newHeight);
                 });
 
-                SC.Tools.updateHeaderColors(this.$el,true);
+                SC.Tools.updateHeaderColors(this.$el, true);
             },
             childViews: {
-                'ProductDetails': function() {
-                    return new ProductDetailsHeaderView({ model: this.model, application: this.options.application });
+                'ProductDetails': function () {
+                    return new ProductDetailsHeaderView({
+                        model: this.model,
+                        application: this.options.application
+                    });
                 },
-                'SubProductDetails': function() {
-                    return new ProductDetailsSubHeaderView({ model: this.model, application: this.options.application });
+                'SubProductDetails': function () {
+                    return new ProductDetailsSubHeaderView({
+                        model: this.model,
+                        application: this.options.application
+                    });
                 }
             },
             template: headerbar_home_tpl,
-            getContext: function() {
-                //console.log("render banner "+this.options.template);
+            getContext: function () {
+                console.log("render banner "+this.options.template);
+
                 var context = {}
                 switch (this.options.template) {
                     case "search":
@@ -132,21 +152,21 @@ define(
                         break;
                     case "home":
                         var commercecategories = [];
-                        _.each(Configuration.navigationData, function(entry) {
-                            if(entry.href!="/range"){
-                            if (entry["data-type"] == "commercecategory") {
-                                if (entry.dataTouchpoint !== undefined) {
-                                    entry.data = entry.data || {};
-                                    entry.data.touchpoint = entry.dataTouchpoint;
-                                }
-                                if (entry.dataHashtag !== undefined) {
-                                    entry.data = entry.data || {};
-                                    entry.data.hashtag = entry.dataHashtag;
-                                }
+                        _.each(Configuration.navigationData, function (entry) {
+                            if (entry.href != "/range") {
+                                if (entry["data-type"] == "commercecategory") {
+                                    if (entry.dataTouchpoint !== undefined) {
+                                        entry.data = entry.data || {};
+                                        entry.data.touchpoint = entry.dataTouchpoint;
+                                    }
+                                    if (entry.dataHashtag !== undefined) {
+                                        entry.data = entry.data || {};
+                                        entry.data.hashtag = entry.dataHashtag;
+                                    }
 
-                                commercecategories.push(entry);
+                                    commercecategories.push(entry);
+                                }
                             }
-                        }
                         });
                         //console.log(commercecategories);
                         if (commercecategories.length > 0) {

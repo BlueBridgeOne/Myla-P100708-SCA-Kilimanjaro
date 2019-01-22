@@ -36,5 +36,6 @@
   "suitecommerce/OrderWizard.Module.PaymentMethod@3.1.0/JavaScript/OrderWizard.Module.PaymentMethod.Selector.js": "JavaScript/OrderWizard.Module.PaymentMethod.Selector.js",
   "suitecommerce/OrderWizard.Module.PaymentMethod@3.1.0/Templates/order_wizard_paymentmethod_threedsecure_module.tpl": "Templates/order_wizard_paymentmethod_threedsecure_module.tpl",
   "suitecommerce/OrderWizard.Module.Shipmethod@3.0.1/JavaScript/OrderWizard.Module.Shipmethod.js": "JavaScript/OrderWizard.Module.Shipmethod.js",
+  "suitecommerce/OrderWizard.Module.Shipmethod@3.0.1/JavaScript/OrderWizard.Module.ShowShipments.js": "JavaScript/OrderWizard.Module.ShowShipments.js",
   "suitecommerce/CreditCard@2.4.1/JavaScript/CreditCard.Edit.View.js": "JavaScript/CreditCard.Edit.View.js"}
 }

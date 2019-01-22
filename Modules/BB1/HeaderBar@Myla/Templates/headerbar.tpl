@@ -32,11 +32,26 @@
 
 </a></div>
 	<div class="header-button checkout-hidden do-not-print" data-view="Header.MiniCart"></div>
+    <div class="header-button checkout-hidden do-not-print">
+        <a ontouchstart="" data-action="show-currencies" href="#">{{selected_currency}}</a>
+    </div>
 	<div class="header-button header-button-my-account checkout-hidden do-not-print"><a ontouchstart="" href="#" data-touchpoint="customercenter">{{translate 'My Account'}}</a>
 	</div>
 </div>
 <div class="header-dropdown checkout-hidden do-not-print">
 	<div id="HeaderCategories" data-view="HeaderMenu.Categories"></div>
 	<div id="HeaderSearch" style="display:none;" data-view="HeaderMenu.Search"></div>
+    <div id="HeaderCurrencies">
+            <ul class="header-currency-list">
+                {{#each currencies}}
+                <li>
+                    <a ontouchstart="" class="header-currency-link" data-action="header-change-currency" data-locale="{{locale}}">
+                                {{title}}
+                            </a>
+                </li>
+                {{/each}}
+
+            </ul>
+    </div>
 </div>
 <div class="header-site-search checkout-hidden do-not-print" data-view="SiteSearch" data-type="SiteSearch"></div>

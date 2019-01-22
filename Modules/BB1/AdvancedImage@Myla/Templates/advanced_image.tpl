@@ -6,7 +6,7 @@
 		</div>
 		{{/if}}
 		{{#if parallax}}
-		<div class="bb1_cct_advanced_image-{{parallax}}" data-parallax="{{parallax}}" style="background-image:url('{{resizeImage image resize}}');'"></div>
+		<div class="bb1_cct_advanced_image-{{parallax}}" data-parallax="{{parallax}}" data-bg-width="{{bgwidth}}" style="background-image:url('{{resizeImage image resize}}');'"></div>
 		{{else}}
 		{{#if isHeader}}
 		<div class="bgimage-anc-child-{{align}} bgimage-anc-child" style="background-image:url('{{resizeImage image resize}}');"></div>

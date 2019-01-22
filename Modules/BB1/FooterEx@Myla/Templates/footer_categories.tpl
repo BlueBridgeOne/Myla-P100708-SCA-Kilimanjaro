@@ -1,5 +1,5 @@
 <div class="footer-categories">
-	<!--<h5 class="footer-categories-subtitle">{{translate 'Our Universe'}}</h5>-->
+	<h5 class="footer-categories-subtitle">{{translate 'Our Universe'}}</h5>
 	<h2 class="footer-categories-title">{{translate 'Myla Collection'}}</h2>
 	<div class="footer-categories-wrapper hide-scrollbars">
 		<ul class="footer-categories-list">

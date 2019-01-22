@@ -9,7 +9,7 @@
     @extend .input-large;
     font-size: $sc-font-size-xl!important;
     color: $myla-color-black!important;
-    font-family: $Domaine-font;
+    font-family: $Proxima-font;
 
 
     @media (max-width: $screen-xs-max) {
@@ -18,7 +18,7 @@
     }
 }
 
-input[type="search"]{ 
+input[type="search"]{
 @media (max-width: $screen-xs-max) {
         font-size: $sc-font-size-m;
         margin-bottom: 0px!important;

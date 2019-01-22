@@ -1,3 +1,4 @@
+<div id="banner-spacer">
 <div class="header-banner BANNER_HOLDER {{className}}" data-parallax="prodbanner" data-height="70" >
 		{{#if image}}
 <div class="bgimage-anc-child-{{image.anc}} bgimage-anc-child" style="background-image:url('{{image.url}}');" />
@@ -13,3 +14,4 @@
 	</div>
 </div>
 <div data-view="SubProductDetails" class="show-product-details-subheader"></div>
+</div>

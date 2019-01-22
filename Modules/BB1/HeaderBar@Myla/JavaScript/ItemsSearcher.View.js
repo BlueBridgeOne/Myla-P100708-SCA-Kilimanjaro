@@ -114,7 +114,7 @@ define(
 			this.on('afterViewRender', this.configureTypeahead, this);
 
 			this.installPlugins();
-			
+
 		}
 
 		//@method installPlugins Internal method used to define the plugins this component expose
@@ -379,6 +379,24 @@ define(
 					,	isAjaxDone: this.options.ajaxDone
 					})
 			,	items_searcher_item = new this.options.itemView(item_view_options);
+
+			// Hide Preview Items
+			var options_string = JSON.stringify(item_view_options);
+			console.log("Item String: " + options_string);
+
+			if (options_string.indexOf('custitem_bb1_mya_item_status') !== -1) {
+				var item_status = item_view_options.model.get('custitem_bb1_mya_item_status');
+				console.log("LLL: " + item_status);
+
+				if (item_status == "Preview") {
+					item_view_options = {};
+					item_view_options.query = this.options.query;
+					item_view_options.areResults = false;
+					item_view_options.isAjaxDone = true;
+
+					items_searcher_item = new this.options.itemView(item_view_options);
+				}
+			}
 
 			items_searcher_item.render();
 			return items_searcher_item.$el;

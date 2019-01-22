@@ -229,7 +229,7 @@ define('Facets.Browse.View', ['SC.Configuration', 'LiveOrder.Model', 'Facets.Hel
                 var facets = this.options.translator.facets,
                 category = this.model.get('category'),
                 title = category ? category.get('pagetitle') || _.pluck(this.getBreadcrumbPages(), 'text').join(' > ') : this.title;
-                
+
             if (facets && facets.length) {
                 var buffer = [],
                     facet = null;
@@ -264,7 +264,7 @@ return title;
             // @method getTitle overrides Backbone.Views.getTitle
             ,
         getTitle: function () {
-                
+
                 return SC.Tools.getTitle(this._getPageTitle());
             }
 
@@ -405,7 +405,7 @@ return title;
                     $(".facets-facet-browse-facets").slideUp();
                     $(".facets-facet-browse-facets-filter").removeClass("filter-open");
                     $(".facets-faceted-navigation-item-category-facet-group-wrapper").removeClass("filter-open");
-                    
+
                 } else {
                     $anchor.addClass("filter-open");
                     $(".facets-facet-browse-facets").slideDown();

@@ -6,13 +6,8 @@
 }}
 
 <a class="header-mini-cart-menu-cart-link {{#if showLines}}header-mini-cart-menu-cart-link-enabled{{/if}}" data-type="mini-cart" title="{{translate 'Cart'}}" data-touchpoint="{{cartTouchPoint}}" data-hashtag="#cart" href="#">
-			<!--Bag Icon -->
-			<svg class="header-button-bag-icon" fill="currentColor" width="21px" height="17px" viewBox="0 0 21 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" alt="{{translate 'Bag'}}">
-				<g transform="translate(-716.000000, -19.000000)" fill-rule="nonzero">
-					<path d="M726.399634,19.047619 C723.805551,19.047619 721.703995,20.6620133 721.703995,22.6547617 L721.703995,22.8571427 L719.294187,22.8571427 C719.27612,22.8563826 719.258013,22.8563826 719.239947,22.8571427 C719.022201,22.8753898 718.845822,23.0012042 718.806026,23.1666665 L716.008789,35.3571421 C715.981059,35.4688099 716.019691,35.5841565 716.114135,35.6716774 C716.208578,35.7591984 716.348964,35.8097492 716.49695,35.8095231 L736.40305,35.8095231 C736.551036,35.8097492 736.691422,35.7591984 736.785865,35.6716774 C736.880309,35.5841565 736.918941,35.4688099 736.891211,35.3571421 L734.093974,23.1666665 C734.049252,22.9867688 733.844228,22.8567714 733.605813,22.8571427 L731.126268,22.8571427 L731.126268,22.6547617 C731.126268,20.6620133 729.024712,19.047619 726.430629,19.047619 L726.399634,19.047619 Z M726.399634,19.8095238 L726.430629,19.8095238 C728.49328,19.8095238 730.13445,21.0702532 730.13445,22.6547617 L730.13445,22.8571427 L722.695813,22.8571427 L722.695813,22.6547617 C722.695813,21.0702532 724.336982,19.8095238 726.399634,19.8095238 Z M719.71261,23.6190474 L721.703995,23.6190474 L721.703995,25.1428569 C721.701466,25.280242 721.795428,25.4080307 721.949903,25.4772903 C722.104377,25.5465498 722.295431,25.5465498 722.449905,25.4772903 C722.60438,25.4080307 722.698343,25.280242 722.695813,25.1428569 L722.695813,23.6190474 L730.13445,23.6190474 L730.13445,25.1428569 C730.13192,25.280242 730.225883,25.4080307 730.380357,25.4772903 C730.534832,25.5465498 730.725885,25.5465498 730.88036,25.4772903 C731.034834,25.4080307 731.128797,25.280242 731.126268,25.1428569 L731.126268,23.6190474 L733.18739,23.6190474 L735.814158,35.0476183 L717.085842,35.0476183 L719.71261,23.6190474 Z" id="Shape"></path>
-				</g>
-			</svg>
-			
+			Bag
+
 	<span class="header-mini-cart-menu-cart-legend">
 		{{#if isLoading}}
 		<span class="header-mini-cart-summary-cart-ellipsis"></span>
@@ -22,7 +17,7 @@
 	</span>
 </a>
 <div class="header-mini-cart">
-	 {{#if showLines}} 
+	 {{#if showLines}}
 	 	<div data-view="Header.MiniCartItemCell" class="header-mini-cart-container"></div>
 		<div class="header-mini-cart-subtotal">
 			<div class="header-mini-cart-subtotal-items">
@@ -53,7 +48,7 @@
 			</div>
 		</div>
 
-		{{else}} 
+		{{else}}
 		<div class="header-mini-cart-empty">
 			<a href="#" data-touchpoint="{{cartTouchPoint}}" data-hashtag="#cart">
 				{{#if isLoading}}
@@ -63,7 +58,7 @@
 				{{/if}}
 			</a>
 		</div>
-	{{/if}} 
+	{{/if}}
 </div>
 
 
@@ -71,8 +66,8 @@
 
 
 {{!----
-Use the following context variables when customizing this template: 
-	
+Use the following context variables when customizing this template:
+
 	model (Object)
 	model.addresses (Array)
 	model.addresses.0 (Object)

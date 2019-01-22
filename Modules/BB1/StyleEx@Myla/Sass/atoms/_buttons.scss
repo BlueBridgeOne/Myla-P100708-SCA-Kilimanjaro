@@ -34,7 +34,7 @@ $sc-color-button-tertiary-active: darken($sc-color-button-tertiary, 6);
 	background: $sc-color-button-primary;
 	display: inline-block;
 	border: 1px solid $sc-color-button-primary;
-	font-family:$Domaine-font;
+	font-family:$Proxima-font;
 
 	&:hover {
 		background: $sc-color-button-primary-hover;
@@ -74,7 +74,7 @@ $sc-color-button-tertiary-active: darken($sc-color-button-tertiary, 6);
 	background: $sc-color-button-secondary;
 	display: inline-block;
 	border: 1px solid $sc-color-button-secondary;
-	font-family:$Domaine-font;
+	font-family:$Proxima-font;
 
 	&:hover {
 		background: $sc-color-button-secondary-hover;
@@ -109,7 +109,7 @@ $sc-color-button-tertiary-active: darken($sc-color-button-tertiary, 6);
 	background: $sc-neutral-shade-0;
 	display: inline-block;
 	border: 1px solid $sc-color-button-tertiary;
-	font-family:$Domaine-font;
+	font-family:$Proxima-font;
 
 	&:hover {
 		color: white;

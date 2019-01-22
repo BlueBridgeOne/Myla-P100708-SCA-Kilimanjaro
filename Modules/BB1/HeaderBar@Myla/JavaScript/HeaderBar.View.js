@@ -30,8 +30,10 @@ define(
                 'click [data-action="show-menu"]': 'showMenu',
                 'click [data-action="shop-all"]': 'showAll',
                 'click [data-action="show-search"]': 'showSearch',
+                'click [data-action="show-currencies"]': 'showCurrencies',
                 'click [data-action="hide-menu"]': 'hideMenu',
-                'click [data-action="show-submenu"]': 'showSubMenu'
+                'click [data-action="show-submenu"]': 'showSubMenu',
+                'click [data-action="header-change-currency"]': 'changeCurrency'
             },
             showSubMenu: function (e) {
                 e.preventDefault();
@@ -81,6 +83,16 @@ define(
             showSearch: function (e) {
                 this.showDropdown(e, "search");
             },
+            showCurrencies: function (e) {
+                this.showDropdown(e, "currencies");
+            },
+            changeCurrency: function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var locale = $(e.currentTarget).attr("data-locale");
+                SC.Tools.setSiteCode(locale);
+                this.render();
+            },
             showDropdown: function (e, type) {
                 e.preventDefault();
                 e.stopPropagation();
@@ -106,6 +118,11 @@ define(
                         $("#HeaderSearch").show();
                     } else {
                         $("#HeaderSearch").hide();
+                    }
+                    if (type == "currencies") {
+                        $("#HeaderCurrencies").show();
+                    } else {
+                        $("#HeaderCurrencies").hide();
                     }
                     if (!shown) {
                         $header.addClass("header-open");
@@ -161,12 +178,29 @@ define(
                     className = "header-foreground-dark";
                 }
                 if (this.home) {
-                    logoClassName = "header-logo-home";
+                    //logoClassName = "header-logo-home";
                 }
+
+                // Currency
+                var site = SC.Tools.getSiteCode(this.application||this.options.application);
+                var selected = "UK (£)";
+                var currencies = SC.Tools.getCurrencies();
+                for (var i = 0; i < currencies.length; i++) {
+                    if (currencies[i].locale == site) {
+                        selected = currencies[i].title;
+                        //console.log("found "+selected);
+                        break;
+                    }
+                }
+
+                var showCurrencies = !SC.ENVIRONMENT.fixedCurrency;
 
                 return {
                     className: className,
-                    logoClassName: logoClassName
+                    logoClassName: logoClassName,
+                    currencies: currencies,
+                    selected_currency: selected,
+                    showCurrencies: showCurrencies
                 };
 
             }

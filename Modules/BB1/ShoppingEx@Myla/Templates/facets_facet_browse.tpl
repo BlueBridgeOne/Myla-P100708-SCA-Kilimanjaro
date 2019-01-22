@@ -12,13 +12,13 @@
 	{{#if showResults}}
 		<div class="facets-facet-browse-content">
 
-			<div data-id="product-search-facets">
+			<div data-id="product-search-facets" id="sticky-nav">
 
 				{{#if isCategory}}
 					<div data-view="Facets.CategorySidebar" class="facets-facet-browse-facets-sidebar"></div>
 				{{/if}}
 			</div>
-			
+
 			<div class="facets-facet-browse-facets-filter">
 				<a class="facets-facet-browse-facets-filter-anchor" data-action="show-filters">
 {{translate 'Filters'}}
@@ -46,7 +46,7 @@
 
 
 			<meta itemprop="name" content="{{title}}"/>
-					
+
 
 
 				{{#if showItems}}
@@ -64,7 +64,7 @@
 				{{/if}}
 			</div>
 		</div>
-		
+
 			<div class="facets-facet-browse-pagination" data-view="GlobalViews.Pagination">
 			</div>
 
@@ -80,8 +80,8 @@
 
 
 {{!----
-Use the following context variables when customizing this template: 
-	
+Use the following context variables when customizing this template:
+
 	total (Number)
 	isTotalProductsOne (Boolean)
 	title (String)

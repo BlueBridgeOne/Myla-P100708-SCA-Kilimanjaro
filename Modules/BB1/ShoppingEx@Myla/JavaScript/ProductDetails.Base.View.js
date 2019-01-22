@@ -345,6 +345,14 @@ define(
                                 Tracker.getInstance().trackProductView(this.model);
                             }
                             document.title = this.getTitle();
+
+                            var item_title = this.model.get('item').get('storedisplayname2');
+                            console.log("Item Title: " + item_title);
+                            $(".product-details-full-content-header-title").html(item_title + " | " + this.getColour());
+                            $(".first-title").html(item_title + " | " + this.getColour());
+
+                            document.getElementById("first-title").innerHTML = "Paragraph changed!";
+
                             return true;
                         }
                     }
@@ -363,6 +371,10 @@ define(
 
                         this.title = this.getTitle();
                         this.page_header = this.model.get('item').get('_pageHeader');
+                        var colour = this.getColour();
+                        if (colour) {
+                            this.page_header += " | " + colour;
+                        }
 
                         this._render();
                     }
@@ -586,7 +598,8 @@ define(
                         urlpdp: urlpdp,
                         urlins: urlins,
                         deliveryTitle:deliveryTitle,
-                        deliveryMessage:deliveryMessage
+                        deliveryMessage:deliveryMessage,
+                        fabricComp: this.model.get('item').get('custitem_bb1_fabric_composition_1')
 
                     };
                     //@class ProductDetails.Base.View

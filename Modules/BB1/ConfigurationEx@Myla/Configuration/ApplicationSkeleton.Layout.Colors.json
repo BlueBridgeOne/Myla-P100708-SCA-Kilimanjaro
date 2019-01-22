@@ -102,7 +102,8 @@
 					"paletteId": "default",
 					"colorName": "Nude",
 					"colorValue": "#F4D5BB",
-					"isLightColor":true
+					"isLightColor":true,
+					"imgsrc":"/images/swatches/Nude Swatch.jpg"
 				}
 				,{
 					"paletteId": "default",
@@ -169,7 +170,8 @@
 					"paletteId": "default",
 					"colorName": "Blush",
 					"colorValue": "#FFEBCD",
-					"isLightColor":true
+					"isLightColor":true,
+					"imgsrc":"/images/swatches/Blush Swatch.jpg"
 				}
 				,{
 					"paletteId": "default",
@@ -179,7 +181,8 @@
 				,{
 					"paletteId": "default",
 					"colorName": "Navy and Yellow",
-					"colorValue": "#000080;#FFFF00"
+					"colorValue": "#000080;#FFFF00",
+					"imgsrc":"/images/swatches/Navy and Yellow Swatch.jpg"
 				}
 				,{
 					"paletteId": "default",

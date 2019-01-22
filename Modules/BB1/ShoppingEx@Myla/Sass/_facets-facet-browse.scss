@@ -5,6 +5,10 @@
 	may use this code subject to the terms that govern your access and use.
 */
 
+#facetList_717 {
+    display: none;
+}
+
 .facets-facet-browse {
     @extend .container;
 }
@@ -29,6 +33,7 @@
     text-align: right;
     display: block;
     width:auto;
+    z-index: 1000;
 
     @media (max-width: $screen-xs-max) {
         margin-top: 0;
@@ -213,7 +218,7 @@
 }
 
 .global-views-pagination-count {
-    font-family: $Domaine-font;
+    font-family: $Proxima-font;
     font-size: 18px;
     word-spacing: 4px;
 }

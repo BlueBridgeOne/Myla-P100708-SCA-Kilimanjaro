@@ -101,11 +101,11 @@ define('Tools', [
                     if (!SMT) {
 
                         //console.log("updateDarkHeader dark=" + dark + " home=" + this.home + " to " + this._onUpdateHeader);
-                        
+
                             for (var f in this._onUpdateHeader) {
                                 this._onUpdateHeader[f]();
                             }
-                        
+
                     }
                 }
 
@@ -139,9 +139,13 @@ define('Tools', [
                         fill: "rgb(" + menucolor + "," + menucolor + "," + menucolor + ")"
                     });
 
+
+
                     $parent.find(".header-foreground").css("background", "rgba(" + backcolor + "," + backcolor + "," + backcolor + "," + backAlpha + ")");
 
-                    $parent.find(".header-foreground").css("background", "linear-gradient(to bottom, rgba(" + backcolor + "," + backcolor + "," + backcolor + "," + (0.5 - (pos * .1)) + ") 0%,rgba(" + backcolor + "," + backcolor + "," + backcolor + "," + (0.15 + (pos * .25)) + ") 60%,rgba(" + backcolor + "," + backcolor + "," + backcolor + "," + (pos * .4) + ") 100%)");
+                    $parent.find(".header-foreground").css("background", "linear-gradient(to bottom, rgba(" + backcolor + "," + backcolor + "," + backcolor + "," + (pos) + ") 0%,rgba(" + backcolor + "," + backcolor + "," + backcolor + "," + ((pos )) + ") 60%,rgba(" + backcolor + "," + backcolor + "," + backcolor + "," + (pos) + ") 100%)");
+
+                    console.log("Pos " + pos);
 
                 }
             },
@@ -156,7 +160,7 @@ define('Tools', [
                 return "Myla London";
             },
             getTitle: function (title) {
-                return _(title).translate() + " | " + this.getName();
+                return _(this.getName() + " | " + title).translate();
             }
             ,setMeta:function(name,content){
                 var $meta=$("[name='"+name+"']");
@@ -170,16 +174,16 @@ define('Tools', [
             ,
             getSEO: function (details) { //Get SEO meta tags based on details object
 
-                //console.log(details);            
-                
+                //console.log(details);
+
                 var meta = "";
                 if (details.summary) {
                     meta+=this.setMeta("twitter:card",details.title);
                 }
-                
+
                     meta += "<meta name=\"twitter:site\" content=\"@MylaLondon\">\r\n";
                     meta+=this.setMeta("twitter:title",details.title);
-                    
+
                     if (details.summary) {
                         meta+=this.setMeta("twitter:description",details.summary);
                     }
@@ -187,7 +191,7 @@ define('Tools', [
                     if (details.image) {
                         meta += "<meta name=\"twitter:image\" content=\"" + this.encodeDQString(details.image) + "\">\r\n";
                     }
-                
+
 
                 meta += "<meta property=\"og:title\" content=\"" + this.encodeDQString(_(details.title).translate()) + "\" />\r\n";
                 meta += "<meta property=\"og:type\" content=\"" + this.encodeDQString(details.type || _("article").translate()) + "\" />\r\n";
@@ -424,12 +428,12 @@ getRRP:function(item){ // Get the item RRP price for the current currency
 
                 var currency = SC.ENVIRONMENT&&SC.ENVIRONMENT.currentCurrency&&SC.ENVIRONMENT.currentCurrency.symbol;
                 var session_currency = SC.SESSION&&SC.SESSION.currency&&SC.SESSION.currency.symbol;
-                
+
                 return session_currency||currency;
             },
             getSiteCode: function (application) {
 
-                
+
 
                 if (SC.isPageGenerator()) {
                     return "Global";
@@ -439,7 +443,7 @@ getRRP:function(item){ // Get the item RRP price for the current currency
                     return this.site;
                 }
                 var TP = SC.ENVIRONMENT.SCTouchpoint;
-               
+
                 if (!Session.get('touchpoints.' + Configuration.get('currentTouchpoint'))) {
                     console.log("Not set TP ");
                     return;
@@ -714,4 +718,3 @@ getRRP:function(item){ // Get the item RRP price for the current currency
 
         return Tools;
     });
-    

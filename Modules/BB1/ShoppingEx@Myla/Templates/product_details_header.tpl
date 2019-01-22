@@ -11,11 +11,11 @@
 		<div id="banner-details-top" class="product-details-full-banner-top-details"></div>
 
 		<section class="product-details-full-main-content">
-			
+
 
 			<div class="product-details-full-main-content-right">
 
-<h3 class="product-details-header-title" itemprop="name">{{pageHeader}}</h3>
+<h3 class="product-details-header-title" id="first-title" itemprop="name">{{pageHeader}}</h3>
 
 			<div class="product-details-full-main">
 				{{#if isItemProperlyConfigured}}
@@ -25,7 +25,7 @@
 							<div id="banner-summary-bottom" class="product-details-full-banner-summary-bottom"></div>
 						</section>
 <div>
-	
+
 	<table class="product-views-price-table"><tr><td><div data-view="Product.Price"></div></td><td>{{#if sizeguide}}
 	<a class="product-views-size-anchor" data-action="show-sizeguide">{{translate 'Size Guide'}}</a>{{/if}}</td></tr></table>
 
@@ -60,15 +60,15 @@
 
 		</section>
 
-		
+
 	</article>
 </div>
 
 
 
 {{!----
-Use the following context variables when customizing this template: 
-	
+Use the following context variables when customizing this template:
+
 	model (Object)
 	model.item (Object)
 	model.item.internalid (Number)

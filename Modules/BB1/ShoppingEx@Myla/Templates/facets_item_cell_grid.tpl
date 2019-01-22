@@ -12,14 +12,6 @@
 		<a class="facets-item-cell-grid-link-image" href="{{url}}">
 			<img class="facets-item-cell-grid-image" src="{{resizeImage thumbnail.url imageSize}}" alt="{{thumbnail.altimagetext}}" itemprop="image"/>
 		</a>
-		{{#if isEnvironmentBrowser}}
-			<div class="facets-item-cell-grid-quick-view-wrapper">
-				<a href="{{url}}" class="facets-item-cell-grid-quick-view-link" data-toggle="show-in-modal">
-					<i class="facets-item-cell-grid-quick-view-icon"></i>
-					{{translate 'Quick View'}}
-				</a>
-			</div>
-		{{/if}}
 	</div>
 
 	<div class="facets-item-cell-grid-details">
@@ -29,7 +21,7 @@
 			<br /><small>{{colour}}</small>
 			{{/if}}
 		</a>
-		
+
 
 		<div class="facets-item-cell-grid-price" data-view="ItemViews.Price">
 		</div>
@@ -49,8 +41,8 @@
 
 
 {{!----
-Use the following context variables when customizing this template: 
-	
+Use the following context variables when customizing this template:
+
 	itemId (Number)
 	name (String)
 	url (String)

@@ -146,6 +146,7 @@ if(bigItem){
 				// @property {ImageContainer} thumbnail
 			,	thumbnail: imageDetails.plp
 			,	colour: this.model.get('colour')
+			,	fabric_comp: this.model.get('custitem_bb1_fabric_composition_1')
 				// @property {Boolean} itemIsNavigable
 			,	itemIsNavigable: !_.isUndefined(this.options.itemIsNavigable) ? !!this.options.itemIsNavigable : true
 				//@property {Boolean} showRating

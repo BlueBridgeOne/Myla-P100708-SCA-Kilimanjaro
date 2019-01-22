@@ -50,7 +50,54 @@ define('AdvancedImage.View', [
                 resize = "zoom"
             }
             var parallax;
-            
+            var ANC_IMAGE = $(".header-banner").find(".bgimage-anc-child");
+            console.log("Back 2: " + ANC_IMAGE.css("background-image"));
+
+            console.log("Is Header: " + isHeader);
+
+            if (isHeader) {
+                var bg_image = this.settings.custrecord_bb1_cct_ai_image2_url || this.settings.custrecord_bb1_cct_ai_image;
+            } else {
+                var bg_image = ANC_IMAGE.css("background-image");
+                bg_image = bg_image.replace('url(','').replace(')','').replace(/\"/gi, "");
+            }
+
+            var bg_width;
+            var bg_height;
+            // Get Image Dimensions
+            //var bg_image = this.settings.custrecord_bb1_cct_ai_image2_url || this.settings.custrecord_bb1_cct_ai_image;
+            console.log("Image URL: " + bg_image);
+            var img = new Image();
+            img.onload = function() {
+                console.log("Dimensions: " + this.width + 'x' + this.height);
+                bg_width = this.width;
+                bg_height = this.height;
+
+                function recalc_bg() {
+                    var banner = $(".BANNER_HOLDER").find(".bgimage-anc-child");
+
+                    var banner_bg = banner.css("background-image");
+                    var banner_holder_width = $(".BANNER_HOLDER").width();
+                    //942
+                    var ratio = banner_holder_width / 1400;
+                    var new_height = bg_height * ratio;
+                    console.log("Banner: " + new_height);
+
+                    $("#banner-spacer").find(".BANNER_HOLDER").css("height", new_height + "px !important");
+                    //$("#banner-spacer").css("height", new_height + "px !important");
+                    $("#banner-spacer").height(new_height);
+                    $("#banner-spacer").find(".BANNER_HOLDER").height(new_height);
+                }
+                recalc_bg();
+                $( window ).resize(function() {
+                    recalc_bg();
+                });
+
+
+            }
+            img.src = bg_image;
+
+
             if(this.settings.custrecord_bb1_cct_ai_parallax&&this.settings.custrecord_bb1_cct_ai_parallax.length>0){
 switch(this.settings.custrecord_bb1_cct_ai_parallax){
     case "2": //Inset Landscape
@@ -59,7 +106,7 @@ switch(this.settings.custrecord_bb1_cct_ai_parallax){
     break;
 }
             }
-            
+
             return {
                 richtext: this.settings.custrecord_bb1_cct_ai_richtext,
                 image: this.settings.custrecord_bb1_cct_ai_image2_url || this.settings.custrecord_bb1_cct_ai_image,

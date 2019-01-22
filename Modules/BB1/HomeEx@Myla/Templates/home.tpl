@@ -7,6 +7,6 @@
 
 <div class="home">
 	<div data-view="HeaderBarHome"></div>
-	<div data-view="ContentGroups" data-groupname="home" />
+
 	<div data-view="FooterCategories" />
 </div>

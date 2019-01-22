@@ -124,7 +124,7 @@ define(
                             }
                             //$this.find(".bgimage-anc-child").height(newHeight);
                             $this.height(newHeight);
-                            
+
                         });
 
                         $(window).trigger('scroll');
@@ -140,7 +140,7 @@ define(
 
                     }, 1000));
 
-                   
+
                     var supportsPassive = false;
                     try {
                       var opts = Object.defineProperty({}, 'passive', {
@@ -151,7 +151,7 @@ define(
                       window.addEventListener("testPassive", null, opts);
                       window.removeEventListener("testPassive", null, opts);
                     } catch (e) {}
-                    
+
                     document.addEventListener("scroll",  function () {
 
                         var $html = $("html");
@@ -181,27 +181,25 @@ define(
                                     case "homebanner":
                                     case "catbanner":
                                     case "prodbanner":
-                                        //console.log($this.attr("class") + " : " + $this.prop("clientHeight") + " a " + top + " " + $this.outerHeight() + " " + $this.height());
+                                        console.log($this.attr("class") + " : " + $this.prop("clientHeight") + " a " + top + " " + $this.outerHeight() + " " + $this.height());
                                         if (top < divh) {
 
                                             var ANC_IMAGE;
-                                            
-                                            
+
+
                                                 ANC_IMAGE = $this.find(".bgimage-anc-child");
-                                                
+
                                                     //ANC_IMAGE.css("background-position", pos[i].x + "% " + (pos[i].y + (top * .15)) + "%");
                                                     //ANC_IMAGE.css("-ms-transform", "translate(0px," + (top * .75) + "px)");
                                                     //ANC_IMAGE.css("-moz-transform", "translate(0px," + (top * .75) + "px)");
-                                                    ANC_IMAGE.css("transform", "translate(0px," + (top * .75) + "px)");
-                                                 
-                                            
+                                                    //ANC_IMAGE.css("transform", "translate(0px," + (top * .75) + "px)");
 
 
                                         }
                                         break;
                                         case "inset_landscape":
                                         var speed = 200;
-                                            
+
                                                 var etop = $this.offset().top;
 
                                                 var entry = top - divh;
@@ -211,14 +209,14 @@ define(
                                                     var pos = ((etop - entry) / (exit - entry)) - .5;
                                                     //ANC_IMAGE.css("-ms-transform", "translate(0px," + (pos * .75) + "px)");
                                                     //ANC_IMAGE.css("-moz-transform", "translate(0px," + (pos * .75) + "px)");
-                                                    $this.css("transform", "translate(0px," + (-pos * speed) + "px)");
-                                                 
+                                                    //$this.css("transform", "translate(0px," + (-pos * speed) + "px)");
+
                                                 }
-                                            
+
                                         break;
                                         case "foreground":
                                         var speed = 200;
-                                            
+
                                                 var etop = $this.offset().top;
 
                                                 var entry = top - divh;
@@ -228,10 +226,10 @@ define(
                                                     var pos = ((etop - entry) / (exit - entry)) - .5;
                                                     //ANC_IMAGE.css("-ms-transform", "translate(0px," + (pos * .75) + "px)");
                                                     //ANC_IMAGE.css("-moz-transform", "translate(0px," + (pos * .75) + "px)");
-                                                    $this.css("transform", "translate(0px," + (pos * speed) + "px)");
-                                                 
+                                                    //$this.css("transform", "translate(0px," + (pos * speed) + "px)");
+
                                                 }
-                                            
+
                                         break;
                                     default:
                                         if (false) {
@@ -253,6 +251,8 @@ define(
                                         }
                                         break;
                                 }
+
+
                             });
 
 

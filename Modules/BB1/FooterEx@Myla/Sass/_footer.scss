@@ -77,6 +77,10 @@ footer {
     }
 }
 
+.FOOTER_TEXT h2 {
+    padding: .4em 0;
+}
+
 .FOOTER_TEXT h2,
 .FOOTER_TEXT_BOTTOM h2 {
     color: $myla-color-white;
@@ -194,14 +198,14 @@ $sc-footer-category-width:308px;
 
 .footer-categories-img {
     img{
-    border: 3px solid $myla-color-darkgrey;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
+    //border: 3px solid $myla-color-darkgrey;
+    //-webkit-border-radius: 20px;
+    //-moz-border-radius: 20px;
+    //border-radius: 20px;
     width: 100%;
     @media (max-width: $screen-sm-max) {
         border: 2px solid $myla-color-darkgrey;
-    
+
     }
 }
 }
@@ -234,7 +238,7 @@ $sc-footer-category-width:308px;
 }
 
 .footer-categories-collection {
-    text-align: center;
+    text-align: left;
     white-space:normal;
 }
 

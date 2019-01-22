@@ -82,7 +82,7 @@ define('Facets.FacetedNavigationItemCategory.View'
 			,	uncollapsible = Configuration.get('categories.sideMenu.uncollapsible')
 			,	collapsed = Configuration.get('categories.sideMenu.collapsed');
 
-			
+
 var isRange=this.model.get("urlfragment")=="range"||this.model.get("parenturl")=="/range";
 if(!isRange){
 			_.each(this.categories, function (category)
@@ -107,6 +107,9 @@ if(!isRange){
 			{
 				var index = breadcrumb.length > 1 ? breadcrumb.length - 2 : breadcrumb.length - 1;
 				parentName = breadcrumb[index].name;
+                if (breadcrumb.length > 1) {
+                    parentName += " / " + breadcrumb[1].name;
+                }
 			}
 			var isActive=false;
 			var parentUrl=this.model.get("parenturl");

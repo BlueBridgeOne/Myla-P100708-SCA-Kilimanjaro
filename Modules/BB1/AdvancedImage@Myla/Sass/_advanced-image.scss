@@ -141,7 +141,7 @@
   }
   .bgimage-anc-child-21{
     @extend .bgimage-anc-child-0;
-    background-position:left top;
+    //background-position:left top;
     @media (max-width: $screen-sm-min) {
       background-position:25% 25%;
     }
@@ -158,7 +158,7 @@
   padding-top:33%;
   background-size:100% auto;
   background-position:center center;
-  -webkit-backface-visibility: hidden; 
+  -webkit-backface-visibility: hidden;
     -ms-transform: translateZ(0); /* IE 9 */
     -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
     transform: translateZ(0);

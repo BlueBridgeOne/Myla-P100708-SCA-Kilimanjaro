@@ -32,15 +32,15 @@ define('Categories'
 			,	self = this;
 
 			var profile = ProfileModel.getInstance();
-			console.log(profile);
-			console.log("Can Preview Category: " + profile.get("canpreview"));
+			//console.log(profile);
+			//console.log("Can Preview Category: " + profile.get("canpreview"));
 
 			_.each(categories, function (category)
 			{
 				var is_hidden = category.hide;
 				var cat_status = category.status;
-				console.log("Is Hidden Cat: " + is_hidden);
-				console.log("Cat Status: " + cat_status);
+				//console.log("Is Hidden Cat: " + is_hidden);
+				//console.log("Cat Status: " + cat_status);
 
 				var href = category.fullurl
 

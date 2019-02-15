@@ -59,7 +59,9 @@ switch(this.settings.custrecord_bb1_cct_ai_parallax){
     break;
 }
             }
-            
+            if(isHeader){
+            console.log("advanced image SMT="+SMT+" image="+(this.settings.custrecord_bb1_cct_ai_image2_url || this.settings.custrecord_bb1_cct_ai_image));
+            }
             return {
                 richtext: this.settings.custrecord_bb1_cct_ai_richtext,
                 image: this.settings.custrecord_bb1_cct_ai_image2_url || this.settings.custrecord_bb1_cct_ai_image,

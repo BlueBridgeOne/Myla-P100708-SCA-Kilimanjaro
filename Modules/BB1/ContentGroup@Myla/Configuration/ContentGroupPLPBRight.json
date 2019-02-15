@@ -2,7 +2,7 @@
   "type": "object",
   "subtab":
   {
-    "id": "contentGroupsPLPBRight",
+    "id": "contentGroupsPLPBright",
     "title": "PLP B Right",
     "group": "contentGroupsTab"
   },
@@ -11,7 +11,7 @@
     "contentGroups.plpbright":
     {
       "group": "contentGroupsTab",
-      "subtab": "contentGroupsPLPBRight",
+      "subtab": "contentGroupsPLPBright",
       "type": "array",
       "title": "PLP B Right",
       "description": "A list of all the groups used in a category.",

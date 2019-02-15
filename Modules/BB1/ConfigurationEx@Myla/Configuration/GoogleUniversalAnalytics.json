@@ -23,7 +23,7 @@
 		,	"type": "string"
 		,	"title": "Google Universal Analytics domain"
 		,	"description": "Enter the domain used for Google Universal Analytics. The value you enter depends on which application you want to use Google Universal Analytics"
-		,	"defaulta": ""
+		,	"defaultab": ""
 		,	"default": "http://www.myla.com"
 		}
 	,	"tracking.googleUniversalAnalytics.domainNameSecure": {

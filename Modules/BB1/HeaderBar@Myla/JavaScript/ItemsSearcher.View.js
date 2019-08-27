@@ -236,6 +236,11 @@ define(
 		{
 			this.options.selectedItem = this.collection.get(item_id);
 
+			var $header = $("#site-header");
+			var $dropdown = $(".header-dropdown");
+			$header.removeClass("header-open");
+			$dropdown.hide();
+	
 			// @event itemSelected
 			this.trigger('itemSelected'
 			//@class ItemsSearcher.View.itemSelected.Properties

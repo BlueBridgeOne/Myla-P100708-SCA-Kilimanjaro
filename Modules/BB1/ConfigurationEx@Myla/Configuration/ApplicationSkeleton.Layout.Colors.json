@@ -88,6 +88,21 @@
 				}
 				,{
 					"paletteId": "default",
+					"colorName": "Cream and Gold",
+					"colorValue": "#FFFACD",
+					"isLightColor":true,
+					"imgsrc":"/images/swatches/Cream and Gold Swatch.jpg"
+				}
+				
+				,{
+					"paletteId": "default",
+					"colorName": "Cream Multi",
+					"colorValue": "#FFFACD",
+					"isLightColor":true,
+					"imgsrc":"/images/swatches/Cream Multi Swatch.jpg"
+				}
+				,{
+					"paletteId": "default",
 					"colorName": "Black and White",
 					"colorValue": "#212121;#FCFAF1",
 					"imgsrc":"/images/swatches/Black and White Swatch.jpg"
@@ -128,6 +143,20 @@
 					"colorValue": "#F7CACA",
 					"isLightColor":true,
 					"imgsrc":"/images/swatches/Pink Swatch.jpg"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Pink Multi",
+					"colorValue": "#F7CACA",
+					"isLightColor":true,
+					"imgsrc":"/images/swatches/Pink Multi Swatch.jpg"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Multi",
+					"colorValue": "#F7CACA",
+					"isLightColor":true,
+					"imgsrc":"/images/swatches/Multi Swatch.jpg"
 				}
 				,{
 					"paletteId": "default",
@@ -186,28 +215,74 @@
 				}
 				,{
 					"paletteId": "default",
+					"colorName": "Navy",
+					"colorValue": "#000080;#FFFF00",
+					"imgsrc":"/images/swatches/Navy Swatch.jpg"
+				}
+				,{
+					"paletteId": "default",
 					"colorName": "Black and Cream",
-					"colorValue": "#212121;#FFFACD"
+					"colorValue": "#212121;#FFFACD",
+					"imgsrc":"/images/swatches/Black and Cream Swatch.jpg"
 				}
 				,{
 					"paletteId": "default",
 					"colorName": "Gold",
 					"colorValue": "#FFD700",
-					"isLightColor":true
+					"isLightColor":true,
+					"imgsrc":"/images/swatches/Gold Swatch.jpg"
 				},{
 					"paletteId": "default",
 					"colorName": "Blue and Black",
-					"colorValue": "#02AAD5;#212121"
+					"colorValue": "#02AAD5;#212121",
+					"imgsrc":"/images/swatches/Blue and Black Swatch.jpg"
 				},{
 					"paletteId": "default",
 					"colorName": "Yellow",
 					"colorValue": "#FFFF00",
-					"isLightColor":true
+					"isLightColor":true,
+					"imgsrc":"/images/swatches/Yellow Swatch.jpg"
 				},{
 					"paletteId": "default",
 					"colorName": "Mint",
 					"colorValue": "#BDFCC9",
-					"isLightColor":true
+					"isLightColor":true,
+					"imgsrc":"/images/swatches/Mint Swatch.jpg"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Chocolate",
+					"colorValue": "#BDFCC9",
+					"isLightColor":true,
+					"imgsrc":"/images/swatches/Chocolate Swatch.jpg"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Nude Multi",
+					"colorValue": "#BDFCC9",
+					"isLightColor":true,
+					"imgsrc":"/images/swatches/Nude Multi Swatch.jpg"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Mint",
+					"colorValue": "#BDFCC9",
+					"isLightColor":true,
+					"imgsrc":"/images/swatches/Mint Swatch.jpg"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Mink",
+					"colorValue": "#BDFCC9",
+					"isLightColor":true,
+					"imgsrc":"/images/swatches/Mink Swatch.jpg"
+				}
+				,{
+					"paletteId": "default",
+					"colorName": "Champagne",
+					"colorValue": "#BDFCC9",
+					"isLightColor":true,
+					"imgsrc":"/images/swatches/Champagne Swatch.jpg"
 				}
 			]
 		}

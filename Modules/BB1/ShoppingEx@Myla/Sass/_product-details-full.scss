@@ -5,6 +5,10 @@
 	may use this code subject to the terms that govern your access and use.
 */
 
+.prod-banner {
+    margin-top: 115px;
+}
+
 .product-details-full {
     @extend .container;
 }
@@ -60,6 +64,94 @@
 }
 .product-details-full-main-content {
     @extend .row;
+    /*
+    @media only screen and (max-width: 768px) {
+          display: flex;
+          flex-direction: column-reverse;
+      }
+      */
+}
+
+#prod-detail-images {
+    @media only screen and (max-width: 768px) {
+        position: relative;
+    }
+
+    .product-details-full-image-box {
+        @media only screen and (max-width: 768px) {
+            display: absolute;
+            top: 0px;
+            display:none;
+
+            &:first-child {
+                display: block;
+            }
+        }
+    }
+
+    .carousel-controls {
+        position: absolute;
+        top: 50px;
+        z-index: 1;
+        width: 100%;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        display: none;
+
+        @media only screen and (max-width: 768px) {
+            display: block;
+        }
+
+        .img-circle {
+            background: rgba(255,255,255,0.3);
+            display: inline-block;
+            padding: 3px 12px 1px 13px;
+            @include border-radius(50px);
+        }
+    }
+
+    .carousel-prev {
+        color: #000;
+        font-size: 32px;
+        float: left;
+        margin-left: 25px;
+        left: 5px;
+        display: none;
+    }
+
+    .carousel-next {
+        color: #000;
+        font-size: 32px;
+        float: right;
+        margin-right: 25px;
+        right: 5px;
+    }
+}
+
+.custcol_bb1_matrix_item_size {
+    @media only screen and (max-width: 768px) {
+        width: 50%;
+    }
+}
+
+.qty {
+    @media only screen and (max-width: 768px) {
+        width: 50%;
+    }
+}
+
+#quantity {
+    @media only screen and (max-width: 768px) {
+        width: 60% !important;
+    }
+
+}
+
+.product-details-quantity-add, .product-details-quantity-remove {
+    @media only screen and (max-width: 768px) {
+        width: 20% !important;
+    }
 }
 
 .product-details-full-content-header {
@@ -252,18 +344,35 @@
     @extend .col-sm-6;
     float: none;
         padding-right:10%;
-    padding-left:10%;
+    padding-left:0%;
     @media (min-width: $screen-sm-min) {
-        float:left;
-            padding-right:5%;
-    padding-left:10%;
+        float:right;
+            padding-right:0%;
+    padding-left:0%;
     }
     @media (min-width: $screen-md-min) {
         float:left;
             padding-right:0%;
-    padding-left:20%;
+    padding-left:0%;
+    }
+    @media (max-width:960px) {
+        padding-right: 0;
     }
 
+}
+
+.product-details-full-image-box {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    img {
+        margin-bottom: -5px;
+    }
+}
+
+.header-foreground {
+    max-width: 100% !important;
 }
 .product-details-full-ins-image{
     width:35%;height:auto;position:absolute;
@@ -320,6 +429,7 @@
     }
     @media (min-width: $screen-md-min) {
         margin-right: 16%;
+        margin-right: 10%;
     }
     @media (max-width: $screen-xs-max) {
         padding-right: 5%;
@@ -340,12 +450,79 @@
 
 .product-details-full-banner-top-details {}
 
+.product-detail-breadcrumbs {
+    margin-bottom: 40px;
+    font-size: 9pt;
+    color: #ccc;
+
+    a {
+        color: #ccc;
+
+        &:hover {
+            color: #000;
+        }
+    }
+
+    .product-detail-crumb-title {
+        color: #000;
+    }
+}
+
+.product-details-full-title-box {
+    @include clearfix;
+}
+
+#colours-box {
+    text-align: left;
+    @include clearfix;
+
+    .guide {
+        float: right;
+        margin-top: 35px;
+        
+        a {
+            color: #ccc;
+
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+}
+
+#size-box {
+    text-align: left;
+    @include clearfix;
+
+    .qty {
+        float: left;
+        padding-top: 10px;
+        margin-left: -8px;
+
+        input {
+            width: 147.36px;
+        }
+    }
+}
+
+.item-relations-related {
+    h3 {
+        color: #000;
+    }
+}
+
+.cart-add-to-cart-button-button {
+    width: 202.48px;
+}
+
 .product-details-full-content-header-title {
     text-transform: uppercase;
     font-size: 17px;
     text-transform: uppercase;
     font-weight: normal;
     margin-top: 0;
+    color: #000;
+    float: left;
 
 
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
@@ -359,6 +536,11 @@
     @media (min-width: $screen-lg-min) {
         font-size: 20px;
     }
+}
+
+.title-price {
+    float: right;
+    margin-top: 5px;
 }
 
 .product-details-full-banner-summary-bottom {}

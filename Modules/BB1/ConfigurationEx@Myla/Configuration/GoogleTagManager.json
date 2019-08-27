@@ -14,8 +14,8 @@
 		,	"type": "string"
 		,	"title": "Google Tag Manager ID"
 		,	"description": "Enter the value of the Google Tag Manager ID. Setting this property enables this feature on your SuiteCommerce Advanced site. "
-		,	"default": ""
-		,	"defaulta": "GTM-WBJ6JHK"
+		,	"defaulta": ""
+		,	"default": "GTM-WBJ6JHK"
 		}
 	,	"tracking.googleTagManager.dataLayerName": {
 			"group": "integrations"

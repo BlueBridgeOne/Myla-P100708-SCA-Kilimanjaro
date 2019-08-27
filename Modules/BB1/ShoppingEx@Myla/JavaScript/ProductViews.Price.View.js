@@ -66,12 +66,12 @@ define(
 			//console.log("Viewer! "+JSON.stringify(price_container_object));
 
 var sale,saleClass,priceMessage=SC.Tools.updatePriceObject(price_container_object);
-
 if (!this.options.hideComparePrice)
 			{
 				showComparePrice = is_price_range ?
 					price_container_object.max.price < price_container_object.compare_price :
 					price_container_object.price < price_container_object.compare_price;
+					//console.log(price_container_object);
 			}
 if(price_container_object.compare_price){ //There is a sale price so work out % off.
 

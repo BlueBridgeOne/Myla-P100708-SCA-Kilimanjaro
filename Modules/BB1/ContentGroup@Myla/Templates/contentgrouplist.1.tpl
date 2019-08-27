@@ -245,7 +245,6 @@
 </div>
 {{/ifEquals}} {{#ifEquals groupTemplate "PRODUCT & CONTENT CELL x5 LEFT"}}
 <!--"PRODUCT & CONTENT CELL x5 LEFT"-->
-<!-- NEW LAYOUT -->
 <div class="CELL_ROW {{#if ../debug}}debug{{/if}}">
 	<div class="COL_12_6">
 		<div class="row">
@@ -838,21 +837,30 @@
 {{/ifEquals}} {{#ifEquals groupTemplate "PRODUCT CELL GROUP x2 RIGHT"}}
 <!--"PRODUCT CELL GROUP x2 RIGHT"-->
 <div class="contentgroup">
-	{{#if imageA}}
-		<div class="product-details-full-image-box"><img src="{{resizeImage imageA.url 'main'}}"></div>
-	{{/if}}
-	{{#if imageB}}
-		<div class="product-details-full-image-box"><img src="{{resizeImage imageB.url 'main'}}"></div>
-	{{/if}}
-	{{#if imageC}}
-		<div class="product-details-full-image-box"><img src="{{resizeImage imageC.url 'main'}}"></div>
-	{{/if}}
-	{{#if imageD}}
-		<div class="product-details-full-image-box"><img src="{{resizeImage imageD.url 'main'}}"></div>
-	{{/if}}
-	{{#if imageE}}
-		<div class="product-details-full-image-box"><img src="{{resizeImage imageE.url 'main'}}"></div>
-	{{/if}}
+	<div class="GROUP_RATIO_8_5">
+		{{#if imageA}}
+		<div class="PRODUCT_CELL_X2_SMALL_SMALLLEFT_ROUNDED">
+			<img class="w-100" src="{{resizeImage imageA.url 'main'}}" />
+		</div>
+		{{else}}
+		<div class="PRODUCT_CELL_X2_SMALL_SMALLLEFT_ROUNDED" data-cms-area-filters="page_type" data-cms-area="{{../page}}GROUP_{{@index}}_CONTENT1">
+			<div class="CELL_HOLDER_RATIO_3_4 CELL_PLACEHOLDER">
+				<span class="PH_TEXT">Content Placeholder</span>
+			</div>
+		</div>
+		{{/if}}
+		{{#if imageB}}
+		<div class="PRODUCT_CELL_X2_SMALL_LARGERIGHT">
+			<img class="w-100" src="{{resizeImage imageB.url 'main'}}" />
+		</div>
+		{{else}}
+		<div class="PRODUCT_CELL_X2_SMALL_LARGERIGHT" data-cms-area-filters="page_type" data-cms-area="{{../page}}GROUP_{{@index}}_CONTENT2">
+			<div class="CELL_HOLDER_RATIO_3_4 CELL_PLACEHOLDER">
+				<span class="PH_TEXT">Content Placeholder</span>
+			</div>
+		</div>
+		{{/if}}
+	</div>
 </div>
 {{/ifEquals}} {{#ifEquals groupTemplate "PROMO CELL GROUP x3 LEFT"}}
 <!--"PROMO CELL GROUP x3 LEFT"-->

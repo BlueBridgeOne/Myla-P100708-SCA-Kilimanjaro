@@ -113,6 +113,22 @@ define('Tools', [
             updateHeaderColors: function ($parent, reset) {
                 //Menu colours
                 //console.log("updateHeaderColors");
+                //console.log("Prod Header: " + $(".prod-banner").length);
+                if ($(".prod-banner").length) {
+                    $parent.find(".header-button,.header-logo").css({
+                        color: "#000",
+                        fill: "#000"
+                    });
+
+
+
+                    $parent.find(".header-foreground").css("color", "#FFFFFF");
+
+                    $parent.find(".header-foreground").css("background", "#fff");
+                    return;
+                }
+
+
                 var top = $(document).scrollTop();
 
                 var vpw = $parent.find(".header-banner").outerHeight() || 100;
@@ -145,7 +161,7 @@ define('Tools', [
 
                     $parent.find(".header-foreground").css("background", "linear-gradient(to bottom, rgba(" + backcolor + "," + backcolor + "," + backcolor + "," + (pos) + ") 0%,rgba(" + backcolor + "," + backcolor + "," + backcolor + "," + ((pos )) + ") 60%,rgba(" + backcolor + "," + backcolor + "," + backcolor + "," + (pos) + ") 100%)");
 
-                    console.log("Pos " + pos);
+                    //console.log("Pos " + pos);
 
                 }
             },
@@ -311,11 +327,16 @@ define('Tools', [
                 //var url, urlpdp, urlplp, urlsoc, urlban,urlins;
 
                 var imageDetails;
+                var image_arr = new Array();
+                var all_image_arr = new Array();
                 if (colour) {
                     for (var i = 0; i < images.length; i++) {
                         imageDetails = SC.Tools.getImageDetails(images[i].url);
-                        //console.log(colour+" "+ imageDetails.colour+" "+images[i].url)
+                        //console.log(colour+" "+ imageDetails.colour+" "+images[i].url);
                         if (colour == imageDetails.colour) {
+                            if (images[i].url.indexOf("pdp") >= 0) {
+                                image_arr.push(imageDetails);
+                            }
                             if (imageDetails.pdp) {
                                 details.pdp = imageDetails;
                             }
@@ -342,7 +363,11 @@ define('Tools', [
                 }
                 for (var i = 0; i < images.length; i++) {
                     imageDetails = SC.Tools.getImageDetails(images[i].url);
-
+                    if (images[i].url.indexOf("pdp") >= 0) {
+                        //console.log(images[i]);
+                        all_image_arr.push(imageDetails);
+                    }
+                
                     if (!details.pdp && imageDetails.pdp) {
                         details.pdp = imageDetails;
                     }
@@ -366,6 +391,7 @@ define('Tools', [
                             details.pos[imageDetails.pos] = imageDetails;
                         }
                     }
+                    
 
                 }
                 if (!details.plp) {
@@ -376,6 +402,12 @@ define('Tools', [
                 }
                 if (!details.soc) {
                     details.soc = details.pdp || details.plp;
+                }
+                details.pos = [];
+                if (colour) {
+                    details.pos = image_arr;
+                } else {
+                    details.pos = all_image_arr;
                 }
                 return details;
             },
@@ -420,7 +452,7 @@ getRRP:function(item){ // Get the item RRP price for the current currency
                 var currency = SC.ENVIRONMENT&&SC.ENVIRONMENT.currentCurrency&&SC.ENVIRONMENT.currentCurrency.code;
                 var session_currency = SC.SESSION&&SC.SESSION.currency&&SC.SESSION.currency.code;
                 if (currency != session_currency) {
-                    console.log("For some reason the site currency " + currency + " does not match the session currency " + session_currency + ".");
+                    //console.log("For some reason the site currency " + currency + " does not match the session currency " + session_currency + ".");
                 }
                 return session_currency||currency;
             },
@@ -445,7 +477,7 @@ getRRP:function(item){ // Get the item RRP price for the current currency
                 var TP = SC.ENVIRONMENT.SCTouchpoint;
 
                 if (!Session.get('touchpoints.' + Configuration.get('currentTouchpoint'))) {
-                    console.log("Not set TP ");
+                    //console.log("Not set TP ");
                     return;
                 }
                 var site = this.getCookie('region');
@@ -454,7 +486,7 @@ getRRP:function(item){ // Get the item RRP price for the current currency
                 }
                 //site = undefined; //TEMP!!!!
                 if (site) {
-                    console.log("Preferred site is " + site);
+                    //console.log("Preferred site is " + site);
                 }
 
                 if (TP == "checkout" || TP == "myaccount") {
@@ -468,7 +500,7 @@ getRRP:function(item){ // Get the item RRP price for the current currency
                         this._geo = true;
                         this.setCookie('region', "UK"); //default to UK.
                         this.site="UK";
-                        console.log("Site is not set, so detect site using IP geo.");
+                        //console.log("Site is not set, so detect site using IP geo.");
 
                         var key = "58db67ff48d37a703b53d5fa44489c345bd3b090c9627f5cfd263123";
                         $.get("https://api.ipdata.co/?api-key=" + key, function (response) {
@@ -476,7 +508,7 @@ getRRP:function(item){ // Get the item RRP price for the current currency
                                 if (response.country_code) {
                                     SC.Tools.setCookie('country', response.country_code);
                                 }
-                                console.log("The IP geo thinks you are here: " + response.continent_code + " - " + response.country_code);
+                                //console.log("The IP geo thinks you are here: " + response.continent_code + " - " + response.country_code);
 
                                 //SC.Tools.showErrorInModal(application,"Testing","The IP geo thinks you are here: " + response.continent_code + " - " + response.country_code);
                                 // response.country_name="Sweden";
@@ -501,7 +533,7 @@ getRRP:function(item){ // Get the item RRP price for the current currency
                                 // return SC.Tools.setSiteCode("Global");
 
                             } catch (err) {
-                                console.log("Unable to get IP geo." + err);
+                                //console.log("Unable to get IP geo." + err);
 
                             }
 
@@ -515,7 +547,7 @@ getRRP:function(item){ // Get the item RRP price for the current currency
 
                     var currency = this.getCurrency();
 
-                    console.log("Site is already set to " + site + " with session currency set to " + currency + ". Check that that site matches the currency, just in case.");
+                    //console.log("Site is already set to " + site + " with session currency set to " + currency + ". Check that that site matches the currency, just in case.");
 
 
                     var currencies = SC.Tools.getCurrencies();

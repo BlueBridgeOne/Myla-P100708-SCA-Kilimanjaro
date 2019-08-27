@@ -35,7 +35,7 @@ may use this code subject to the terms that govern your access and use.
 		<span class="product-views-price-lead">
 			<span class="{{saleClass}}">
 			{{#if showComparePrice}}
-			<span class="saleLine">{{translate 'Was'}} {{comparePriceFormatted}} </span>{{translate 'Now'}}
+			<span class="saleLine"></span>{{translate 'From'}}
 			{{/if}}
 			<span itemprop="price" data-rate="{{price}}">
 				{{priceFormatted}}

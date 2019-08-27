@@ -16,6 +16,11 @@
 	}
 }
 
+.close-search {
+	position: absolute;
+	top: 0;
+}
+
 .site-search-content {
 	@extend .nav-search-content;
 }

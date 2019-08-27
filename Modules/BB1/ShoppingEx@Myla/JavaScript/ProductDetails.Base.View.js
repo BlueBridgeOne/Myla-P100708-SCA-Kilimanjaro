@@ -349,9 +349,9 @@ define(
                             var item_title = this.model.get('item').get('storedisplayname2');
                             console.log("Item Title: " + item_title);
                             $(".product-details-full-content-header-title").html(item_title + " | " + this.getColour());
-                            $(".first-title").html(item_title + " | " + this.getColour());
+                            $(".product-detail-crumb-title").html(item_title + " | " + this.getColour());
 
-                            document.getElementById("first-title").innerHTML = "Paragraph changed!";
+                            //document.getElementById("first-title").innerHTML = "Paragraph changed!";
 
                             return true;
                         }
@@ -520,6 +520,37 @@ define(
                         $("#pdpimage").attr("src", urlpdp);
                     }
 
+                    // Change Colour Images
+                    if (imageDetails.pos[0]) {
+                        var urlimg1 = imageDetails.pos[0].url || '';
+                        $("#pdpimage1").attr("src", urlimg1);
+                    } 
+
+                    if (imageDetails.pos[1]) {
+                        var urlimg2 = imageDetails.pos[1].url || '';
+                        $("#pdpimage2").attr("src", urlimg2);
+                    }
+
+                    if (imageDetails.pos[2]) {
+                        var urlimg3 = imageDetails.pos[2].url || '';
+                        $("#pdpimage3").attr("src", urlimg3);
+                    }
+
+                    if (imageDetails.pos[3]) {
+                        var urlimg4 = imageDetails.pos[3].url || '';
+                        $("#pdpimage4").attr("src", urlimg4);
+                    }
+
+                    if (imageDetails.pos[4]) {
+                        var urlimg5 = imageDetails.pos[4].url || '';
+                        $("#pdpimage5").attr("src", urlimg5);
+                    }
+
+                    $('.carousel-inner .active').removeClass('active').hide();
+                    $('.carousel-inner .carousel-item:first').addClass('active').show();
+                    $(".carousel-prev").hide();
+                    $(".carousel-next").show();
+
                     var urlins = imageDetails.ins && imageDetails.ins.url;
                     if (urlins) {
                         $("#insimage").attr("src", urlins);
@@ -554,8 +585,42 @@ define(
                 getContext: function () {
                     var item_model = this.model.get('item');
                     var imageDetails = this.getImageDetails();
+                    //console.log(imageDetails);
                     var urlpdp = imageDetails.pdp && imageDetails.pdp.url;
                     var urlins = imageDetails.ins && imageDetails.ins.url;
+                    if (imageDetails.pos[0]) {
+                        var urlimg1 = imageDetails.pos[0].url || '';
+                    } else {
+                        var urlimg1 = '';
+                    }
+
+                    if (imageDetails.pos[1]) {
+                        var urlimg2 = imageDetails.pos[1].url || '';
+                    } else {
+                        var urlimg2 = '';
+                    }
+
+                    if (imageDetails.pos[2]) {
+                        var urlimg3 = imageDetails.pos[2].url || '';
+                    } else {
+                        var urlimg3 = '';
+                    }
+
+                    if (imageDetails.pos[3]) {
+                        var urlimg4 = imageDetails.pos[3].url || '';
+                    } else {
+                        var urlimg4 = '';
+                    }
+
+                    if (imageDetails.pos[4]) {
+                        var urlimg5 = imageDetails.pos[4].url || '';
+                    } else {
+                        var urlimg5 = '';
+                    }
+
+                    
+                    
+                    
 
                     var site = SC.Tools.getSiteCode();
                     var deliveryTitle, deliveryMessage;
@@ -579,6 +644,16 @@ define(
                             break;
                     }
 
+                    //var crumbs = this.model.get('item').get('_breadcrumb');
+                    var crumbs = this.model.get('item').get('commercecategory');
+                    var range = this.model.get('item').get('class');
+                    console.log("Range: " + range);
+                    var range_name = range;
+                    var range_url = "/range/" + range.replace(/\s+/g, '-').toLowerCase()
+
+                    var cat1_name = crumbs.categories[0].name;
+                    var cat1_url = crumbs.categories[0].urls;
+
                     //@class ProductDetails.Base.View.Context
                     return {
                         //@property {Transaction.Line.Model} model
@@ -597,6 +672,15 @@ define(
                         isPriceEnabled: !ProfileModel.getInstance().hidePrices(),
                         urlpdp: urlpdp,
                         urlins: urlins,
+                        urlimg1: urlimg1,
+                        urlimg2: urlimg2,
+                        urlimg3: urlimg3,
+                        urlimg4: urlimg4,
+                        urlimg5: urlimg5,
+                        range_name: range_name,
+                        range_url: range_url,
+                        cat1_name: cat1_name,
+                        cat1_url: cat1_url,
                         deliveryTitle:deliveryTitle,
                         deliveryMessage:deliveryMessage,
                         fabricComp: this.model.get('item').get('custitem_bb1_fabric_composition_1')

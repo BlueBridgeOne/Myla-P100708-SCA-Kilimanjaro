@@ -14,8 +14,8 @@
 		,	"type": "string"
 		,	"title": "Google Universal Analytics ID"
 		,	"description": "Enter the Google Universal Analytics Tracking ID. SuiteCommerce Advanced inserts this property into each page of the application. To locate the tracking ID, login to your Google Analytics account and go to Admin > Property > Property Settings."
-		,	"defaulta": ""
-		,	"default": "UA-281468-4"
+		,	"default": ""
+		,	"defaulta": "UA-281468-4"
 		}
 	,	"tracking.googleUniversalAnalytics.domainName": {
 			"group": "integrations"
@@ -23,8 +23,8 @@
 		,	"type": "string"
 		,	"title": "Google Universal Analytics domain"
 		,	"description": "Enter the domain used for Google Universal Analytics. The value you enter depends on which application you want to use Google Universal Analytics"
-		,	"defaulta": ""
-		,	"default": "http://www.myla.com"
+		,	"default": ""
+		,	"defaulta": "http://www.myla.com"
 		}
 	,	"tracking.googleUniversalAnalytics.domainNameSecure": {
 			"group": "integrations"
@@ -32,8 +32,8 @@
 		,	"type": "string"
 		,	"title": "Google Universal Analytics secure domain"
 		,	"description": "Enter the secure domain used for Google Universal Analytics. Possible values are the same as the Universal Analytics Domain property."
-		,	"defaulta": ""
-		,	"default": "https://www.myla.com"
+		,	"default": ""
+		,	"defaulta": "https://www.myla.com"
 		}
 	}
 }

@@ -91,7 +91,9 @@ define(
 					case "PRODUCT CELL x2 SMALL LEFT":
 					case "PRODUCT CELL x2 SMALL RIGHT":
 					case "PRODUCT CELL GROUP x2 LEFT":
+						return 2;
 					case "PRODUCT CELL GROUP x2 RIGHT":
+						return 5;
 					case "HOME x2 LEFT":
 					case "HOME x2 RIGHT":
 						return 2;

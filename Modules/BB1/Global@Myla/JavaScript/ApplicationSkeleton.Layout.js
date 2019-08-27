@@ -98,7 +98,7 @@ define(
                         //arrange footer
                         var $footer = $("footer");
                         var footerheight = $footer.outerHeight() + parseInt($footer.css("margin-top"));
-                        $("#main-container").css("margin-bottom", footerheight + "px");
+                        //$("#main-container").css("margin-bottom", footerheight + "px");
 
                         //center scrolls
 

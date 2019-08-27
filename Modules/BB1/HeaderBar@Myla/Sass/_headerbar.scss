@@ -226,7 +226,7 @@ $header-height-mobile:66px;
     @extend .container;
     position: relative;
     width: 100%;
-    background-color: #DDD;
+    //background-color: #DDD;
     overflow: hidden;
     z-index: 5;
 }
@@ -239,7 +239,7 @@ $header-height-mobile:66px;
         position: absolute;
         left: 0;
         width: 100%;
-        background-color: #DDD;
+        //background-color: #DDD;
         overflow: hidden;
         z-index: 5;
         max-width: 100% !important;

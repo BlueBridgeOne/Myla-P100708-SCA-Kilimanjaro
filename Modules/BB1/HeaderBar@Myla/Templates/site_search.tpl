@@ -5,7 +5,7 @@
 	may use this code subject to the terms that govern your access and use.
 }}
 
-<div class="site-search" data-type="site-search">
+<div class="site-search" id="BOXID" data-type="site-search">
     <div class="site-search-content">
         <form class="site-search-content-form" method="GET" action="/search" data-action="search">
             <div class="site-search-content-input">
@@ -24,7 +24,18 @@
             </div>
         </form>
     </div>
+    <a href="#" class="close-search" data-action="show-search">X</a>
 </div>
+<script>
+document.getElementById("BOXID").addEventListener("focusout", myFunction);
+
+function myFunction() {
+    var $header = $("#site-header");
+    var $dropdown = $(".header-dropdown");
+    $header.removeClass("header-open");
+    $dropdown.hide();
+}
+</script>
 
 
 

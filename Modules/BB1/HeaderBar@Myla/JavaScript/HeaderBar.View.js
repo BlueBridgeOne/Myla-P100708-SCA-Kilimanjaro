@@ -105,7 +105,7 @@ define(
                     if (shown) {
                         $header.removeClass("header-open");
                         $dropdown.hide();
-                        console.log("Hide menu from dropdown type " + type);
+                        //console.log("Hide menu from dropdown type " + type);
                     }
                 } else {
                     //Show or hide the correct dropdown, e.g. categories or search
@@ -134,7 +134,7 @@ define(
                 }
             },
             hideMenu: function (e) {
-                console.log("Hide Menu From Header Bar");
+                //console.log("Hide Menu From Header Bar");
                 var $header = $("#site-header");
                 var $dropdown = $(".header-dropdown");
                 $header.removeClass("header-open");

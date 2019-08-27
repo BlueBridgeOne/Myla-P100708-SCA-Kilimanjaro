@@ -9,6 +9,21 @@
   height:100% !important;
 }
 
+#slider {
+  //
+}
+
+#slider-inner {
+  width: 100%;
+  position: relative;
+}
+
+.bgimage-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .text-container{
   position: absolute !important;
   padding: $sc-padding-lv4 !important;

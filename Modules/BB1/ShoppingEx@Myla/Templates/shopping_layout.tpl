@@ -20,6 +20,7 @@
 	<div id="footer-spacer" ></div>
 	
 </div>
+<div id="cms-shop-by-size-area" data-cms-area="cms-shop-by-size-area" data-cms-area-filters="path"></div>
 <footer id="site-footer" class="shopping-layout-footer" data-view="Footer"></footer>
 
 

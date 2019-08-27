@@ -8,13 +8,14 @@
 footer {
     @extend .container;
     background: $myla-color-darkgrey;
-    position: fixed;
-    bottom: 0;
+    //position: fixed;
+    //bottom: 0;
     width: 100%;
-    left: 50%;
+    max-width: 100% !important;
+    //left: 50%;
     z-index: -1;
     border-right: 1px solid white;
-    transform: translateX(-50%);
+    //transform: translateX(-50%);
     margin-top: $grid-gutter-width;
     padding-bottom: 0;
 

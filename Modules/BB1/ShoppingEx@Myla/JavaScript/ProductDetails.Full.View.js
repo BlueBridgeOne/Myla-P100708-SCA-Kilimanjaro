@@ -138,6 +138,81 @@ var item=this.options.model.get("item");
             getContext: function getContext() {
             var sizeguide=this.model.get("item").get("custitem_bb1_sca_sizeguide_content");
              var CMSName = "PROD" + this.model.get("item").get("itemid") + "_";
+
+             
+
+                
+
+                
+
+                function waitForElementToDisplay(selector, time) {
+                    if(document.querySelector(selector)!=null) {
+                        // Fixed Scroll Script
+                        //$("#custcol_bb1_matrix_item_colour-container").prependTo("#colours-box");
+                        //$("#custcol_bb1_matrix_item_size-container").prependTo("#size-box");
+
+                        // Fixed Product info
+                        //console.log("Width: " + $(window).width());
+                        if ($(window).width() >= 960) {
+
+                            var info_box = $(".product-details-full-main-content-right");
+                            var related_items = $(".prod-rel");
+                            var info_offset = info_box.offset();
+                            var related_offset = related_items.offset();
+                            //console.log("Info Offset: " + info_offset.left + " | Related Offset: " + related_offset.top + " | Right Off Bot: " + info_box.height());
+                            info_box.css("position", "fixed");
+                            info_box.css("left", info_offset.left);
+
+                            $(window).scroll(function(e){ 
+                                var wrap = $(".product-details-full-main-content-left");
+                                if ($(this).scrollTop() >= related_offset.top - info_box.height() - 100) {
+                                    //console.log("reaxched");
+                                    info_box.css("position", "absolute");
+                                    info_box.css("left", info_offset.left);
+                                    info_box.css("top", related_offset.top - info_box.height() - 30);
+                                } else {
+                                    info_box.css("position", "fixed");
+                                    info_box.css("left", info_offset.left);
+                                    info_box.css("top", info_offset.top);
+                                }
+                            
+                            });
+                        }
+                        return;
+                    }
+                    else {
+                        setTimeout(function() {
+                            waitForElementToDisplay(selector, time);
+                        }, time);
+                    }
+
+                    if ($(window).width() < 960) {
+                        var image_arr = new Array();
+                        $( ".carousel-item" ).each(function( index ) {
+                                  console.log( index + ": " + $( this ).html() );
+                                image_arr.push($( this ).html());
+                        });
+                        var img_count = image_arr.length;
+                        $("#prod-detail-images").html(image_arr[0]);
+            
+                        var tid = setTimeout(prod_slider, 2000);
+                        var img_shown = 0;
+                        function prod_slider() {
+                            if (img_shown < img_count) {
+                                img_shown++;
+                            } else {
+                                img_shown = 0;
+                            }
+                            $("#prod-detail-images").html(image_arr[img_shown]);
+                            tid = setTimeout(prod_slider, 2000); // repeat myself
+                        }
+                        function abortTimer() { // to be called when you want to stop the timer
+                            clearInterval(tid);
+                          }
+                    }
+                }
+                waitForElementToDisplay(".prod-rel", 2000);
+
                 //@class ProductDetails.Full.View.Context @extend ProductDetails.Base.View.Context
                 return _.extend(ProductDetailsBaseView.prototype.getContext.apply(this, arguments), {
                     position: "full",

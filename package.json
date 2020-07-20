@@ -49,7 +49,7 @@
         "jsonlint": "1.6.2",
         "jsonpath-plus": "0.15.0",
         "lazypipe": "0.2.2",
-        "lodash": "2.4.1",
+        "lodash": "4.17.19",
         "map-stream": "0.1.0",
         "mime": "1.2.11",
         "moment": "2.8.3",
